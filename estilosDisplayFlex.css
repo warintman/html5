@@ -62,10 +62,11 @@ p{margin:5px 0px 5px 0px}
 .Pie{border:solid 1px #DBDCE3;}
 
 .HeaderContainer{width:100%;padding:0px;}
-.HeaderContainer{background:transparent url(./logoR.png) repeat-y right 0px;}
+.HeaderContainer{background:transparent url(./logomarm.png) repeat-y 0px;transform:scaleX(-1);}
 .HeaderContainer{border-bottom:solid 2px #DBDCE3}
 
-.HeaderContainer .Titulo{background:transparent url(./logomarm.png) no-repeat;width:100%;font-variant:small-caps;font-weight:bold;font-size:3em;text-align: center;}
+.HeaderContainer .Titulo{background:transparent url(./logomarm.png) no-repeat;width:100%;font-variant:small-caps;font-weight:bold;font-size:3em;text-align: center;
+  transform:scaleX(-1);}
 .HeaderContainer .subTitulo{font-size: 50%;}
 
 .ToolBar{color:black;width:100%;}
