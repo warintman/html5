@@ -1,0 +1,22 @@
+video { 
+  position: fixed;
+  right: 0; 
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 100%;
+  width: auto; 
+  height: auto;
+  z-index: -100;
+}
+
+body {
+/*  Background fallback in case of IE8 & down, or in case video doens't load, such as with slower connections  */
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.MenuContainer, .splitter, .mainContainer {background-color: white;}
+
+.Pie span.P {color: ghostwhite;}
+
+.Titulo {color:#F6E9E9;}
