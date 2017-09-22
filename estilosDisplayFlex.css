@@ -33,8 +33,7 @@ html {
     align-content: stretch;
     flex-basis: 100%;
   }
-  .HeaderContainer {
-  }
+  
   .ToolBar {
     height: 2.2em;
   }
@@ -51,10 +50,7 @@ html {
     border-right: solid 1px silver;
     margin-right: 3px;
   }
-  .footer {
-    
-  }
-
+  
 p{margin:5px 0px 5px 0px}
 
 .Pie{padding:5px;text-align:center;}
