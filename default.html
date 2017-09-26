@@ -9,21 +9,28 @@
 <link rel="stylesheet" href="estilosDisplayGrid.css" />
 -->
 <!-- -->
-<link rel="stylesheet" href="estilosDisplayFlex.css" />
 <link rel="stylesheet" href="video.css" />
-<link rel="stylesheet" href="animate.css">
+<link rel="stylesheet" href="tooltip.css" />
+<link rel="stylesheet" href="animate.css"/>
+<link rel="stylesheet" href="estilosDisplayFlex.css" />
 </head>
  
 <body>
         
     <header class="HeaderContainer">            
             <div class="Titulo">RETO
-                <div class="CloseSesionTool pulse tooltip"><span class="tooltiptext tooltip-bottom">Cerrar sesión</span></div>
-                <div class="UserTool pulse"></div>                
+                <div class="CloseSesionTool tooltip">
+                    <span class="no-animation tooltiptext tooltip-bottom">Cerrar sesión</span>
+                    <div class="CloseSesionToolIcon pulse"></div>
+                </div>
+                <div class="UserTool tooltip" id="UserTool">
+                    <span class="tooltiptext tooltip-left">Perfil de usuario</span>
+                    <div class="UserToolIcon lightElement"></div>
+                </div>             
                 <div class="subTitulo animated zoomIn">Registro Electrónico de Transacciones y Operaciones</div>                
             </div>                 
     </header>
-    <nav class="ToolBar">
+    <nav class="ToolBar" id="ToolBar">
         
     </nav>
     <article>
@@ -47,7 +54,7 @@
     <footer class="footer Pie">
         <span class="P">Ministerio de Agricultura y Pesca, Alimentación y Medio Ambiente</span>
     </footer>
-    
+    <script language="JavaScript" src="default.js"></script>
 </body>
 
 </html>
