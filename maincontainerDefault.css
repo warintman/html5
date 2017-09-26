@@ -1,0 +1,47 @@
+.mainContainer {
+    display: flex;
+    align-content: stretch;
+    align-items: stretch;
+    flex-wrap: nowrap;    
+    flex-direction: column;
+    padding: 0.5em 0 .25em 0.5em;
+    overflow: auto;
+    overflow-x: hidden;    
+}
+
+.tituloTarea {
+    font-size:1.5em;
+    margin:5px 0px 5px 0px;
+    padding:0px 0px 2px 0px;
+    line-height:1.5em;
+    border-bottom:solid 1px gray;
+}
+
+.grupoTareas {
+    /*display: inline-flex;*/
+    align-content: stretch;
+    align-items: stretch;
+    flex-wrap: wrap;    
+    flex-direction: row;
+    /*height: 12em;*/
+}
+
+.G5 {width: 29.8em; height: 12em; float: left; border: solid 1px silver; border-radius:.5em; margin: .5em; box-sizing:border-box; padding: 11px 8px 5px 56px;}
+.G5 { position: relative; transition: all 0.4s ease-in-out; -webkit-transition: 0.4s ease-in-out;}
+.G5:hover{ border-color: gray; }
+.G5 h5 { margin: 0em; margin-bottom: .2em; border: none; font-size: 1.3em; color: navy; background-color: white; background-image:none;}
+.G5 h5 .task-sub-title {font-size:90%; color:red; font-weight:normal; font-style:italic;}
+.G5 h5 .task-sub-title:before { content: "\A"; white-space:pre; }
+.G5 a.link{ text-decoration:none; margin: 0 .5em 0 0; }
+.G5-buttons { position: absolute; bottom: .2em; left: .2em; right: .2em; padding:.5em; border-top:solid 1px silver; text-align:right; }
+.G5-image { position: absolute; top: .42em; bottom: .42em; left: .42em; right: .42em; }
+.G5-image { width: 5.4em; height: 50px; background: transparent url(Dlg_S_Sheet.png) no-repeat -47px -147px; }               
+.i_doc_info { background-position: 0 -48px }
+.i_tables   { background-position: 6px -238px; }
+.i_docs     { background-position: 2px -98px; }
+.i_users    { background-position: 2px -191px; } 
+.i_export   { background-position: 0 -339px }
+.i_doc_ok   { background-position: -99px 0 }
+.i_historico{ background-position: -192px -144px }
+.i_admin    { background-position: -240px -144px }  
+.i_send_csv { background-position: -46px -144px }
