@@ -79,7 +79,13 @@ p{margin:5px 0px 5px 0px}
 .HeaderContainer .subTitulo{font-size: 50%;}
 
 .ToolBar{color:black;width:100%;}
-.ToolBar{background:white url(./HeaderBG.jpg) repeat-y right 0px;}
+.ToolBar{
+  background: white;
+  background: -webkit-linear-gradient(left,#FFFFFF,#FFFFFF,rgba(231,245,158,1)); /*Safari 5.1-6*/
+  background: -o-linear-gradient(right,#FFFFFF,#FFFFFF,rgba(231,245,158,1)); /*Opera 11.1-12*/
+  background: -moz-linear-gradient(right,#FFFFFF,#FFFFFF,rgba(231,245,158,1)); /*Fx 3.6-15*/
+  background: linear-gradient(to right, #FFFFFF,#FFFFFF, rgba(231,245,158,1)); /*Standard*/
+}
 .ToolBar{border-bottom:solid 1px #DBDCE3}
 .ToolBar{margin-top:0px;}
  
@@ -117,56 +123,6 @@ p{margin:5px 0px 5px 0px}
                 }
 .Menu li.title + li{ border:none}
 
-.no-animation {
-  -webkit-animation: none !important;
-  animation: none !important;
-  animation-play-state:paused !important;
-  -webkit-animation-play-state:paused !important;
-}
-
-@-webkit-keyframes pulse {
-  25% {
-    -webkit-transform: scale(1.2);
-    transform: scale(1.2);
-  }
-  75% {
-    -webkit-transform: scale(0.8);
-    transform: scale(0.8);
-  }
-}
-
-@keyframes pulse {
-  25% {
-    -webkit-transform: scale(1.2);
-    -ms-transform: scale(1.2);
-    transform: scale(1.2);
-  }
-  75% {
-    -webkit-transform: scale(0.8);
-    -ms-transform: scale(0.8);
-    transform: scale(0.8);
-  }
-}
-
-.pulse {
-  display: inline-block;
-  -webkit-transform: translateZ(0);
-  -ms-transform: translateZ(0);
-  transform: translateZ(0);
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-}
-
-.pulse:hover {
-  -webkit-animation-name: pulse;
-  animation-name: pulse;
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s;
-  -webkit-animation-timing-function: linear;
-  animation-timing-function: linear;
-  -webkit-animation-iteration-count: infinite;
-  animation-iteration-count: infinite;  
-}
-
 .UserTool{
   margin-top: .5em;
   margin-right: .5em;
@@ -179,17 +135,6 @@ p{margin:5px 0px 5px 0px}
   background: url("./userdata.png") no-repeat;
   width: 100%;
   height: 100%;
-}
-
-@keyframes light {
-  0%   { opacity: 1; }
-  100% { opacity: .5; }
-}
-
-.lightElement:hover {
-  -webkit-animation: light 1s 1;
-  animation: light 1s 1;
-  opacity: .5;
 }
 
 .CloseSesionToolIcon {
