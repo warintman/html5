@@ -37,7 +37,21 @@ html {
   .ToolBar {
     height: 2.2em;
     display: none;
+    /*display: flex;*/
+    align-content: stretch;
+    align-items: stretch;
+    flex-wrap: wrap; 
+    justify-content: space-between;
   }
+
+  .Perfil {
+    margin-left: 10px !important;
+  }
+
+  .Usuario {
+    margin-right: 15px !important;
+  }
+
   .MenuContainer {
     width: auto;    
   }
@@ -60,7 +74,7 @@ p{margin:5px 0px 5px 0px}
 .HeaderContainer{background:transparent url(./logomarm.png) repeat-y 0px;transform:scaleX(-1);}
 .HeaderContainer{border-bottom:solid 2px #DBDCE3}
 
-.HeaderContainer .Titulo{background:transparent url(./logomarm.png) no-repeat;width:100%;font-variant:small-caps;font-weight:bold;font-size:3em;text-align: center;
+.HeaderContainer .Titulo{background:transparent url(./logomarm.png) no-repeat;width:100%;font-weight:bold;font-size:3em;text-align: center;
   transform:scaleX(-1);}
 .HeaderContainer .subTitulo{font-size: 50%;}
 
@@ -74,7 +88,7 @@ p{margin:5px 0px 5px 0px}
 .ToolBar a.icon{color:inherit;padding-left:20px;}
 .ToolBar a:hover{color:blue;}
 
-.ToolBar div{margin:2px;display:block;float:left;white-space:nowrap;}
+.ToolBar div{margin:2px;display:block;white-space:nowrap;}
 .ToolBar div{color:inherit;cursor:inherit;padding:3px 1px 3px 4px;}
 .ToolBar div.icon{padding-left:20px;background:transparent url() no-repeat 0.1em center;}
 
