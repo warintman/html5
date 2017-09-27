@@ -98,7 +98,7 @@ p{margin:5px 0px 5px 0px}
 .ToolBar div{color:inherit;cursor:inherit;padding:3px 1px 3px 4px;}
 .ToolBar div.icon{padding-left:20px;background:transparent url() no-repeat 0.1em center;}
 
-.MenuContainer{width:18em;border-right: solid 1px #DBDCE3;border-left: solid 1px #DBDCE3;padding:0px;}		
+.MenuContainer{display: block;z-index: 1;overflow-y: auto;overflow-x: hidden;width:18em;border-right: solid 1px #DBDCE3;border-left: solid 1px #DBDCE3;padding:0px;}		
 .Menu{margin:0px;padding:3px;cursor:pointer;border: solid 0px #DBDCE3;}
 .Menu{background-color:white;}
 
