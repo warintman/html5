@@ -50,33 +50,48 @@
             
         </aside>        
         <section class="mainContainer">
-        
+            <div class="flexContainer">
                 <h4 class="tituloTarea">Tareas Comunes</h4>
                 <div class="grupoTareas" >
-                            <div class="G5" id="Div1" runat="server">                
-                                <div class="G5-image i_send_csv"></div>
-                                <h5><a class="link" href="pages/Transaccion.aspx">Transacciones</a></h5>
-                                Permite gestionar el alta, edición o borrado de las transacciones.
+                            <div class="G5 animated lightSpeedIn" id="Div1" runat="server">
+                                <div class="G5-container">                
+                                    <div class="G5-image i_send_csv">
+                                        <div class="G5-texto">
+                                            <h5><a class="link" href="pages/Transaccion.aspx">Transacciones</a></h5>
+                                            Permite gestionar el alta, edición o borrado de las transacciones.
+                                        </div>
+                                    </div>
+                                </div>
                                 <div class="G5-buttons">             
                                   <a id="NCarga" runat="server" class="link" href="pages/NTransaccion.aspx">Nueva transacción</a>       
-                                  <a class="link" href="pages/Transaccion.aspx">Consulta de transacciones</a>
+                                  <a class="link" id="consulta" href="pages/Transaccion.aspx">Consulta de transacciones</a>
                                 </div> 
                             </div>
                         
-                            <div class="G5" id="TaskDatos" runat="server">                
-                                <div class="G5-image i_send_csv"></div>
-                                <h5><a class="link" href="pages/Data/list.aspx">Carga de datos</a></h5>
-                                Permite realizar la carga y/o modificación masiva de los datos de las transacciones por medio de archivos de texto (<b>.csv</b>).
+                            <div class="G5 animated lightSpeedIn" id="TaskDatos" runat="server">     
+                                <div class="G5-container">           
+                                    <div class="G5-image i_send_csv">
+                                        <div class="G5-texto">
+                                            <h5><a class="link" href="pages/Data/list.aspx">Carga de datos</a></h5>
+                                            Permite realizar la carga y/o modificación masiva de los datos de las transacciones por medio de archivos de texto (<b>.csv</b>).
+                                        </div>
+                                    </div>
+                                </div>
                                 <div class="G5-buttons">                    
                                   <a class="link" href="pages/Data/Send.aspx">Nueva carga</a>                
-                                  <a class="link" href="pages/Data/list.aspx">Consulta de cargas</a>
+                                  <a class="link" id="consulta1" href="pages/Data/list.aspx">Consulta de cargas</a>
                                 </div> 
                             </div>
                         
-                            <div class="G5" id="TaskHelp" runat="server">
-                                <div class="G5-image i_docs"></div>
+                            <div class="G5 animated lightSpeedIn" id="TaskHelp" runat="server">
+                                    <div class="G5-container">
+                                <div class="G5-image i_docs">
+                                        <div class="G5-texto">
                                 <h5><a class="link" href="pages/Documentacion.aspx">Descarga de documentos</a></h5>
                                 Manuales del funcionamiento de la aplicación y documentos, archivos y guías útiles para la carga masiva de datos.
+                            </div>
+                        </div>
+                    </div>
                                 <div class="G5-buttons">
                                   <a class="link" href="pages/Documentacion.aspx">Ir a la página</a>
                                 </div>
@@ -84,19 +99,29 @@
                 </div>
                 <h4 class="tituloTarea">Tablas Auxiliares</h4>
                 <div class="grupoTareas">
-                        <div id="TaskUnidades" class="G5" runat="server">
-                            <div class="G5-image i_tables"></div>        
+                        <div id="TaskUnidades" class="G5 animated lightSpeedIn" runat="server">
+                                <div class="G5-container">
+                            <div class="G5-image i_tables">      
+                                    <div class="G5-texto">  
                             <h5><a class="link" href="pages/Unidad.aspx">Tipos de unidades</a></h5>
                             Permite gestionar el alta, edición o borrado de los tipos de unidades.
+                        </div>
+                    </div>
+                </div>
                             <div class="G5-buttons">
                                 <a class="link" href="pages/Unidad.aspx">Ir a la página</a>
                             </div>        
                         </div>        
                             
-                            <div id="TaskRepreROPO" class="G5" runat="server">
-                            <div class="G5-image i_tables"></div>        
+                            <div id="TaskRepreROPO" class="G5 animated lightSpeedIn" runat="server">
+                                    <div class="G5-container">
+                            <div class="G5-image i_tables">        
+                                    <div class="G5-texto">
                             <h5><a class="link" href="pages/RepreROPO.aspx">Representantes de entidades ROPO</a></h5>
                             Permite gestionar el alta, edición o borrado de los representantes de entidades ROPO que tendrán acceso a la aplicación.
+                        </div>
+                    </div>
+                </div>
                             <div class="G5-buttons">
                                 <a class="link" href="pages/RepreROPO.aspx">Ir a la página</a>
                             </div>        
@@ -104,26 +129,36 @@
                 </div>
                 <h4 class="tituloTarea">Administración</h4>
                 <div class="grupoTareas">
-                        <div class="G5" id="TaskUsers" runat="server">
-                            <div class="G5-image i_users"></div>         
+                        <div class="G5 animated lightSpeedIn" id="TaskUsers" runat="server">
+                                <div class="G5-container">
+                            <div class="G5-image i_users">         
+                                    <div class="G5-texto">
                             <h5><a class="link" href="Regeus.UAdmin.aspx">Gestión de usuarios</a></h5>
                             Permite a los <b>administradores</b> la gestión de usuarios.
+                        </div>
+                    </div>
+                </div>
                             <div class="G5-buttons">
                                 <a class="link" href="Regeus.UAdmin.aspx">Ir a la página</a>
                             </div>        
                         </div> 
                             
-                            <div class="G5" id="TaskAdmin" runat="server"> 
-                            <div class="G5-image i_admin"></div>                            
+                            <div class="G5 animated lightSpeedIn" id="TaskAdmin" runat="server"> 
+                                    <div class="G5-container">
+                            <div class="G5-image i_admin">         
+                                    <div class="G5-texto">                   
                             <h5>Servicios Web<span class="task-sub-title">(Administración)</span></h5>
                             Permite la gestión de los usuarios de los servicios WEB y la consulta de las peticiones realizadas.
+                        </div>
+                    </div>
+                </div>
                             <div class="G5-buttons">         
                                 <a class="link" href="Pages/Admin/Reports.aspx">Listados</a>                
                                 <a class="link" href="Pages/Admin/WSAdmin.aspx">Gestión de usuarios</a>       
                             </div> 
                         </div>
                 </div>
-
+            </div>
         </section>
     </article>
     <footer class="footer Pie">
