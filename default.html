@@ -21,28 +21,38 @@
 <body>
         
     <header class="HeaderContainer">            
-        
+        <div class="Vacio"></div>
+        <div class="Titulo">RETO<div class="subTitulo animated zoomIn">Registro Electrónico de Transacciones y Operaciones</div>                
+        </div>
 			
-		<div class="menu">
-            <div class="item pulse" id="CloseSesionTool">
-                <a class="linkIcon icon_logout rollable"></a>
+		<nav class="menu">
+            <div class="item">
+                <a class="linkIcon icon_home rollable"></a>
                 <div class="item_content">
-                    <h2>Cerrar Sesión</h2>                    
+                    <h2>Inicio</h2>
+                    <p>
+                        <a href="">Inicio</a>
+                        <a href="">Documentación</a>                        
+                    </p>
                 </div>
             </div>
-            <div class="item" id="UserTool">
-                <a class="linkIcon icon_user rollable"></a>
+            <div class="item itemAncho">
+                <a class="linkIcon icon_transaccion rollable"></a>
                 <div class="item_content">
-                    <h2>Perfil de Usuario</h2>                    
+                    <h2>Transacciones</h2>
+                    <p>
+                        <a href="">Nueva transacción</a>
+                        <a href="">Consulta de transacciones</a>                        
+                    </p>
                 </div>
             </div>
             <div class="item">
-                <a class="linkIcon icon_admin rollable"></a>
+                <a class="linkIcon icon_carga rollable"></a>
                 <div class="item_content">
-                    <h2>Administración</h2>
+                    <h2>Carga de Datos</h2>
                     <p>
-                        <a href="">Usuarios</a>
-                        <a href="">Estadísticas de acceso</a>                        
+                        <a href="">Nueva carga</a>
+                        <a href="">Consulta de cargas</a>                        
                     </p>
                 </div>
             </div>
@@ -57,49 +67,30 @@
                     </p>
                 </div>
             </div>
-			<div class="item">
-                <a class="linkIcon icon_carga rollable"></a>
-                <div class="item_content">
-                    <h2>Carga de Datos</h2>
-                    <p>
-                        <a href="">Nueva carga</a>
-                        <a href="">Consulta de cargas</a>                        
-                    </p>
-                </div>
-            </div>
-			<div class="item itemAncho">
-                <a class="linkIcon icon_transaccion rollable"></a>
-                <div class="item_content">
-                    <h2>Transacciones</h2>
-                    <p>
-                        <a href="">Nueva transacción</a>
-                        <a href="">Consulta de transacciones</a>                        
-                    </p>
-                </div>
-            </div>
             <div class="item">
-                <a class="linkIcon icon_home rollable"></a>
+                <a class="linkIcon icon_admin rollable"></a>
                 <div class="item_content">
-                    <h2>Inicio</h2>
+                    <h2>Administración</h2>
                     <p>
-                        <a href="">Inicio</a>
-                        <a href="">Documentación</a>                        
+                        <a href="">Usuarios</a>
+                        <a href="">Estadísticas de acceso</a>                        
                     </p>
                 </div>
             </div>
-        </div>
-		
-		<div class="Titulo">RETO
-            <!--<div class="CloseSesionTool tooltip" id="CloseSesionTool">
-                <span class="no-animation tooltiptext tooltip-bottom">Cerrar sesión</span>
-                <div class="CloseSesionToolIcon pulse"></div>
+            <div class="item" id="UserTool">
+                <a class="linkIcon icon_user rollable"></a>
+                <div class="item_content">
+                    <h2>Perfil de Usuario</h2>                    
+                </div>
             </div>
-            <div class="UserTool tooltip" id="UserTool">
-                <span class="tooltiptext tooltip-left">Perfil del usuario</span>
-                <div class="UserToolIcon lightElement"></div>
-            </div>             -->
-            <div class="subTitulo animated zoomIn">Registro Electrónico de Transacciones y Operaciones</div>                
-        </div>                 
+            <div class="item" id="CloseSesionTool">
+                <a class="linkIcon icon_logout rollable"></a>
+                <div class="item_content">
+                    <h2 class="pulse">Cerrar Sesión</h2>                    
+                </div>
+            </div>                                    						            
+        </nav>
+				                 
     </header>
     <nav class="ToolBar" id="ToolBar">
         <div class="Perfil">Perfil: Administrador</div>
@@ -111,31 +102,7 @@
             <source src="./Wheat.mp4" type="video/mp4" />
             <!-- <source src="https://upload.wikimedia.org/wikipedia/commons/transcoded/f/f1/Clouds_%28time_lapse%29.webm/Clouds_%28time_lapse%29.webm.1080p.ogv" type="video/ogg" />-->
         </video>
-<!--
-        <aside class="MenuContainer"> 
-		
-                <ul class="Menu">
-                    <li class="current" selected="True"><a id="Menu1-001" href="/reto/default.aspx">Página de inicio</a></li>
-                    <li selected="False"><a id="Menu1-002" href="/reto/pages/Transaccion.aspx">Buscar Transacción</a></li>
-                    <li selected="False"><a id="Menu1-003" href="/reto/pages/NTransaccion.aspx">Nueva Transacción</a></li>
-                    <li selected="False"><a id="Menu1-004" href="/reto/Pages/Documentacion.aspx" class="Pdf ">Documentación</a></li>
-                    <li class="title">Carga de datos</li>
-                    <li selected="False"><a id="Menu1-006" href="/reto/pages/data/send.aspx" class="send ">Nueva carga</a></li>
-                    <li selected="False"><a id="Menu1-007" href="/reto/pages/data/list.aspx">Consulta de cargas</a></li>
-                    <li class="title">Tablas auxiliares</li>
-                    <li selected="False"><a id="Menu1-009" href="/reto/pages/Unidad.aspx">Tipos de unidades</a></li>
-                    <li selected="False"><a id="Menu1-010" href="/reto/pages/RepreROPO.aspx">Representantes de entidades ROPO</a></li>
-                    <li selected="False"><a id="Menu1-011" href="/reto/pages/Huerfanos.aspx">Entidades de baja con usuarios activos</a></li>
-                    <li class="title">Administración</li>
-                    <li selected="False"><a id="Menu1-013" href="/reto/Regeus.UAdmin.aspx" class="Usuarios ">Usuarios</a></li>
-                    <li selected="False"><a id="Menu1-014" href="RETO" target="_blank" class="Charts ">Estadísticas de acceso</a></li>
-                </ul>            
-				
-        </aside>
-        <aside class="splitter">
-            
-        </aside>  
--->      
+
         <section class="mainContainer">
             <div class="flexContainer">
                 <h4 class="tituloTarea">Tareas Comunes</h4>
