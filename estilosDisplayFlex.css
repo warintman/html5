@@ -71,7 +71,7 @@ p{margin:5px 0px 5px 0px}
 
 .HeaderContainer{  
   /*width: 100%;*/
-  margin: auto;
+  margin: auto;  
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -79,7 +79,11 @@ p{margin:5px 0px 5px 0px}
   flex-wrap: wrap;
 }
 
-.HeaderContainer{min-height: 7.5em; padding:0px;z-index: 0;}
+*::-ms-backdrop, .HeaderContainer{  
+  margin: 10px 5px 0px 5px; /* IE 11 */
+}
+
+.HeaderContainer{min-height: 7.5em; padding:0px;}
 .HeaderContainer{border-bottom:solid 2px #DBDCE3}
 
 .HeaderContainer .Titulo{
