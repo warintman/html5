@@ -35,10 +35,11 @@ html {
     flex-basis: 100%;
   }
   
+  body nav {display: none;}
+
   .ToolBar {
-    height: 2.2em;
-    display: none;
-    /*display: flex;*/
+    display: flex;
+    flex-direction: row;
     align-content: stretch;
     align-items: stretch;
     flex-wrap: wrap; 

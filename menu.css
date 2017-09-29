@@ -209,3 +209,12 @@ header nav {
         flex-direction: column;
     }
 }
+
+@media screen and (max-width: 435px) {
+    .ToolBar {
+        flex-direction: column;
+    }
+    .Perfil {
+        margin: 3px !important;
+    }
+}
