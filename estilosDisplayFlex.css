@@ -68,11 +68,11 @@ p{margin:5px 0px 5px 0px}
 }
 .Pie{border-top:solid 1px #DBDCE3;}
 
-.HeaderContainer{
+.HeaderContainer{  
+  /*width: 100%;*/
+  margin: auto;
   display: flex;
   justify-content: space-between;
-  width: 100%;
-  margin: auto;
   align-items: center;
   flex-direction: row;
   flex-wrap: wrap;
