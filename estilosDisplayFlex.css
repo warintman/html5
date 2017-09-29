@@ -73,7 +73,7 @@ p{margin:5px 0px 5px 0px}
 }
 .Pie{border-top:solid 1px #DBDCE3;}
 
-.HeaderContainer{height: 7.5em; padding:0px;z-index: 0;}
+.HeaderContainer{min-height: 7.5em; padding:0px;z-index: 0;}
 /*.HeaderContainer{background:transparent url(./logomarm.png) repeat-y 0px;transform:scaleX(-1);}*/
 .HeaderContainer{border-bottom:solid 2px #DBDCE3}
 
