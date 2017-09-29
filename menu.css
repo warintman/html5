@@ -1,0 +1,212 @@
+.menu{
+    font-family: "Trebuchet MS", sans-serif;
+    /*font-size: 8px;*/
+    font-style: normal;
+    font-weight: bold;
+    /*text-transform: uppercase;*/
+	display: block;
+	margin: 5px 5px;
+}
+.item{
+	z-index: 999;
+    position:relative;
+    background-color:#f0f0f0;
+	opacity: 0.9;
+    float:right;
+    width:52px;
+    margin:0px 5px;
+    height:52px;
+    border:2px solid #ddd;
+    -moz-border-radius:30px;
+    -webkit-border-radius:30px;
+    border-radius:30px;
+    -moz-box-shadow:1px 1px 3px #555;
+    -webkit-box-shadow:1px 1px 3px #555;
+    box-shadow:1px 1px 3px #555;
+    cursor:pointer;
+    overflow:hidden;
+	
+	-webkit-transition: width 1s ease-in-out;
+    -moz-transition: width 1s ease-in-out;
+    -o-transition: width 1s ease-in-out;
+    transition: width 1s ease-in-out;
+}
+
+.item:hover{
+	width: 268px;
+}
+
+.itemAncho:hover {
+	height: 100px;
+}
+
+.linkIcon{
+    /*left:2px;
+    top:2px;*/
+    position:absolute;
+    width:48px;
+    height:48px;
+}
+.icon_home{
+    background:transparent url(home.png) no-repeat top left;
+}
+.icon_logout{
+    background:transparent url(logout.png) no-repeat top left;
+}
+.icon_user{
+    background:transparent url(user.png) no-repeat top left;
+}
+.icon_admin{
+    background:transparent url(userAdmin.png) no-repeat top left;
+}
+.icon_tablasAux{
+    background:transparent url(tablasAux.png) no-repeat top left;
+}
+.icon_carga{
+    background:transparent url(cargaDatos.png) no-repeat top left;
+}
+.icon_transaccion {
+	background:transparent url(transaccion.png) no-repeat top left;
+}
+.item_content{
+    position:absolute;    
+    width:220px;
+    overflow:hidden;
+    left:56px;
+    /*top:7px;*/
+    background:transparent;
+    /*display:none;*/
+}
+.item_content h2{
+    color:#6F6C66;
+    text-shadow: 1px 1px 1px #fff;
+    background-color:transparent;
+    font-size:12px;
+	margin: 8px 0px 0px 0px;
+}
+.item_content a{
+    background-color:transparent;
+    float:left;
+    margin-right:7px;
+    margin-top:3px;
+    color:#9B9A95;
+    text-shadow: 1px 1px 1px #fff;
+    text-decoration:none;
+    font-size: 10px;
+}
+.item_content a:hover{
+    color:#0b965b;
+}
+.item_content p {
+    background-color:transparent;
+	margin: 0px;
+    /*display:none;*/
+}
+.item_content p input{
+    border:1px solid #ccc;
+    padding:1px;
+    width:155px;
+    float:left;
+    margin-right:5px;
+}
+
+.mouseout {
+  -webkit-transition: -webkit-transform 1s linear;
+  -moz-transition: -moz-transform 1s linear;
+  -o-transition: -o-transform 1s linear;
+  transition: transform 1s linear;
+}
+
+.mouseout:hover {
+  -webkit-transition: -webkit-transform 1s linear;
+  -moz-transition: -moz-transform 1s linear;
+  -o-transition: -o-transform 1s linear;
+  transition: transform 1s linear;
+  -webkit-transform: rotate(360deg);
+  -moz-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+  -o-transform: rotate(360deg);
+  transform: rotate(360deg);
+}
+
+.rollable:hover {
+    -webkit-animation-name: spinIn;
+    -webkit-animation-duration: 200ms;
+    -webkit-animation-iteration-count: 4;
+    -webkit-animation-timing-function: linear;
+    -moz-animation-name: spinIn;
+    -moz-animation-duration: 200ms;
+    -moz-animation-iteration-count: 4;
+    -moz-animation-timing-function: linear;
+    -ms-animation-name: spinIn;
+    -ms-animation-duration: 200ms;
+    -ms-animation-iteration-count: 4;
+    -ms-animation-timing-function: linear;
+    
+    animation-name: spinIn;
+    animation-duration: 200ms;
+    animation-iteration-count: 4;
+    animation-timing-function: linear;
+}
+
+.unrollable:not(:hover) {
+    -webkit-animation-name: spinOut;
+    -webkit-animation-duration: 200ms;
+    -webkit-animation-iteration-count: 4;
+    -webkit-animation-timing-function: linear;
+    -moz-animation-name: spinOut;
+    -moz-animation-duration: 200ms;
+    -moz-animation-iteration-count: 4;
+    -moz-animation-timing-function: linear;
+    -ms-animation-name: spinOut;
+    -ms-animation-duration: 200ms;
+    -ms-animation-iteration-count: 4;
+    -ms-animation-timing-function: linear;
+    
+    animation-name: spinOut;
+    animation-duration: 200ms;
+    animation-iteration-count: 4;
+    animation-timing-function: linear;
+}
+
+@-ms-keyframes spinOut {
+    from { -ms-transform: rotate(0deg); }
+    11% {      transform: rotate(40deg);    }  
+    22% {      transform: rotate(80deg);    }  
+    33% {      transform: rotate(120deg);    }  
+    44% {      transform: rotate(160deg);    }
+    55% {      transform: rotate(200deg);    }
+	66% {      transform: rotate(240deg);    }
+	77% {      transform: rotate(280deg);    }
+	88% {      transform: rotate(320deg);    }
+    to { -ms-transform: rotate(360deg); }
+}
+@-moz-keyframes spinOut {
+    from { -moz-transform: rotate(0deg); }
+    to { -moz-transform: rotate(360deg); }
+}
+@-webkit-keyframes spinOut {
+    from { -webkit-transform: rotate(0deg); }
+    to { -webkit-transform: rotate(360deg); }
+}
+@keyframes spinOut {
+    from {transform:rotate(0deg);}
+    to {transform:rotate(360deg);}
+}
+
+@-ms-keyframes spinIn {
+    from { -ms-transform: rotate(360deg); }
+    to { -ms-transform: rotate(0deg); }
+}
+@-moz-keyframes spinIn {
+    from { -moz-transform: rotate(360deg); }
+    to { -moz-transform: rotate(0deg); }
+}
+@-webkit-keyframes spinIn {
+    from { -webkit-transform: rotate(360deg); }
+    to { -webkit-transform: rotate(0deg); }
+}
+@keyframes spinIn {
+    from {transform:rotate(360deg);}
+    to {transform:rotate(0deg);}
+}
