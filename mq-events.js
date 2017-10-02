@@ -26,7 +26,7 @@
                 }
             }
         }
-    }
+    };
 
     // Yeah, this is a little shitty
     window.mqEvents = mqEvents;

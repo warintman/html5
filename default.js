@@ -11,8 +11,7 @@
         document.getElementById('menu').classList.remove('menuHidden');        
         document.getElementById('menu').classList.add('menuVisible');
     });
-    document.getElementById('menuClose').addEventListener("click",closeMenu);
-
+    document.getElementById('menuClose').addEventListener("click",closeMenu);    
     function closeMenu(){
         document.getElementById('menuOpen').style.display='block';
         document.getElementById('menuClose').style.display='none';
