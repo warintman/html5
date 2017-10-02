@@ -27,7 +27,7 @@
         // TODO: Figure out what the hell that's all about
         console.log();
 
-        if (mql.matches && (mql.media==='screen and (max-width: 660px)')) {
+        if (mql.matches && (mql.media==='screen and (max-width: 660px)' || mql.media==='screen and (max-width:660px)')) {
             //si estaba abierto el menu, lo cierro
             closeMenu();
         }        

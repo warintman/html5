@@ -11,6 +11,7 @@
         if (sheets.length>0) {
             for (var i = 0; i < sheets.length; i += 1) {
                 var rules = sheets[i].cssRules;
+                if (!rules) rules = sheets[i].rules;
                 if (rules && rules.length>0) {
                     for (var j = 0; j < rules.length; j += 1) {
                         // This Stackoverflow answer helped me figure out how
