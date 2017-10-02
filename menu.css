@@ -8,6 +8,11 @@ header nav {
     display:none;    
 }
 
+.iconMaterial {
+    font-size:36px;
+    color:#60C442;
+}
+
 .HeaderContainer {
     flex-direction: row;
 }
@@ -240,6 +245,11 @@ header nav {
     #menuClose {
         display:none;
         cursor: pointer;
+        -webkit-border-radius: 90px;
+        -moz-border-radius: 90px;
+        border-radius: 90px;
+        border: 1px solid #60C442;
+
     }
     .menuHidden {display: none;}
     .menuVisible {display: flex;}
