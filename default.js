@@ -24,7 +24,7 @@
         // For some reason Firefox has trouble always running this code.
         // The console.log seems to help it.
         // TODO: Figure out what the hell that's all about
-        console.log();
+        //console.log();
 
         if (mql.matches && (mql.media==='screen and (max-width: 660px)' || mql.media==='screen and (max-width:660px)')) {
             //si estaba abierto el menu, lo cierro
