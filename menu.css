@@ -31,6 +31,7 @@ header nav {
 }
 
 .item{	   
+    z-index: 999;
     background-color:#f0f0f0;
 	opacity: 0.9;    
     width:52px;
@@ -132,7 +133,7 @@ header nav {
   transform: rotate(360deg);
 }
 
-.rollable:hover {
+.rollable {
     -webkit-animation-name: spinIn;
     -webkit-animation-duration: 200ms;
     -webkit-animation-iteration-count: 4;
@@ -152,7 +153,7 @@ header nav {
     animation-timing-function: linear;
 }
 
-.unrollable:not(:hover) {
+.unrollable {
     -webkit-animation-name: spinOut;
     -webkit-animation-duration: 200ms;
     -webkit-animation-iteration-count: 4;

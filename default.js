@@ -1,7 +1,7 @@
 (function(){ 
     //barra de navegacion (perfil + usuario)
-    document.getElementById('UserTool').addEventListener("mouseover",function mouseover(){document.getElementById('ToolBar').style.display='block';});
-    document.getElementById('UserTool').addEventListener("mouseout",function mouseover(){document.getElementById('ToolBar').style.display='none';});
+    document.getElementById('UserTool').addEventListener("mouseover",function mouseoverut(){document.getElementById('ToolBar').style.display='block';});
+    document.getElementById('UserTool').addEventListener("mouseout",function mouseoverut(){document.getElementById('ToolBar').style.display='none';});
     //salida de la aplicacion
     document.getElementById('CloseSesionTool').addEventListener("click",function logout(){location.href = window.location.origin + '/' + window.location.pathname.split("/")[1] + '/default.aspx?action=logout';});
     //el menu
@@ -35,5 +35,17 @@
     //https://bugs.chromium.org/p/chromium/issues/detail?id=49001
     //poner el chrome con --allow-file-access-from-files para probarlo en local
     mqEvents(handleMediaChange);
+
+    //icono del menu rodante
+    document.querySelectorAll('.item').forEach(function(currentValue){
+        currentValue.addEventListener("mouseover",function mouseovermenuitem(){ 
+            this.children[0].classList.remove('unrollable');     
+            this.children[0].classList.add('rollable');       
+        });
+        currentValue.addEventListener("mouseout",function mouseoutmenuitem(){ 
+            this.children[0].classList.remove('rollable');
+            this.children[0].classList.add('unrollable');            
+        });
+    });
 
 })();
