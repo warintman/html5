@@ -1,10 +1,11 @@
-<!DOCTYPE html>
+<!doctype html>
  
 <html lang="es">
  
 <head>
 <title>Titulo de la web</title>
 <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- 
 <link rel="stylesheet" href="estilosDisplayGrid.css" />
 -->
@@ -16,17 +17,24 @@
 <link rel="stylesheet" href="estilosDisplayFlex.css" />
 <link rel="stylesheet" href="maincontainerDefault.css" />
 <link rel="stylesheet" href="menu.css" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
  
-<body>
-        
+<body>    
     <header>
-        <div class="HeaderContainer">            
-            <div class="Vacio"></div>
-            <div class="Titulo">RETO<div class="subTitulo animated zoomIn">Registro Electrónico de Transacciones y Operaciones</div>                
+        <div class="HeaderContainer">
+                                
+            <div class="VacioRight"></div>
+            <div class="Titulo">
+                <div class="iconoMenu" id="iconoMenu">
+                    <i class="material-icons" id="menuOpen" style="font-size:32px;color:#60C442;">menu</i>
+                    <i class="material-icons" id="menuClose" style="font-size:32px;color:#60C442;">close</i>
+                </div>
+                RETO<div class="subTitulo animated zoomIn">Registro Electrónico de Transacciones y Operaciones</div>                
             </div>
-                
-            <nav class="menu">
+            <div class="VacioLeft"></div>
+
+            <nav class="menu menuHidden" id="menu">
                 <div class="item itemAncho">
                     <a class="linkIcon icon_home rollable"></a>
                     <div class="item_content">
@@ -211,6 +219,7 @@
     <footer class="footer Pie">
         <span class="P">Ministerio de Agricultura y Pesca, Alimentación y Medio Ambiente</span>
     </footer>
+    <script language="JavaScript" src="mq-events.js"></script>
     <script language="JavaScript" src="default.js"></script>
 </body>
 
