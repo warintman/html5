@@ -48,9 +48,7 @@
         });
         itemsMenu[i].addEventListener("mouseout",function mouseoutmenuitem(){             
             if (this.children[0].classList.contains('rollable')) this.children[0].classList.remove('rollable');
-            this.children[0].classList.add('unrollable');
-            var _elem = this.children[0];
-            //setTimeout(function() {if (_elem.classList.contains('unrollable')) _elem.classList.remove('unrollable');}, 2000);   
+            this.children[0].classList.add('unrollable');                       
         });
     }
 
