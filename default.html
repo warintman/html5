@@ -13,7 +13,6 @@
 <link rel="stylesheet" href="video.css" />
 <link rel="stylesheet" href="tooltip.css" />
 <link rel="stylesheet" href="animateDefault.css"/>
-<link rel="stylesheet" href="animate.css"/>
 <link rel="stylesheet" href="estilosDisplayFlex.css" />
 <link rel="stylesheet" href="maincontainerDefault.css" />
 <link rel="stylesheet" href="menu.css" />
@@ -34,7 +33,7 @@
                     <i class="material-icons iconMaterial" id="menuOpen">menu</i>
                     <i class="material-icons iconMaterial" id="menuClose">close</i>
                 </div>
-                <div id="titulo"></div><div id="subtitulo" class="subTitulo animated zoomIn"></div>                
+                <div id="titulo"></div><div id="subtitulo" class="subTitulo zoomIn"></div>                
             </div>
             <div class="VacioLeft"></div>
 
@@ -50,16 +49,16 @@
     </nav>
     <article>
         <video poster="./wheat.png" autoplay loop id="video-background" muted plays-inline>
-            <!-- <source src="https://upload.wikimedia.org/wikipedia/commons/f/f1/Clouds_%28time_lapse%29.webm" type="video/webm">-->
+            <source src="./Wheat.webm" type="video/webm">
             <source src="./Wheat.mp4" type="video/mp4" />
-            <!-- <source src="https://upload.wikimedia.org/wikipedia/commons/transcoded/f/f1/Clouds_%28time_lapse%29.webm/Clouds_%28time_lapse%29.webm.1080p.ogv" type="video/ogg" />-->
+            <source src="./Wheat.ogv" type="video/ogg" />
         </video>
 
         <section class="mainContainer">
             <div class="flexContainer">
                 <h4 class="tituloTarea">Tareas Comunes</h4>
                 <div class="grupoTareas" >
-                            <div class="G5 animated lightSpeedIn" id="Div1" runat="server">
+                            <div class="G5 lightSpeedIn" id="Div1" runat="server">
                                 <div class="G5-container">                
                                     <div class="G5-image i_send_csv">
                                         <div class="G5-texto">
@@ -74,7 +73,7 @@
                                 </div> 
                             </div>
                         
-                            <div class="G5 animated lightSpeedIn" id="TaskDatos" runat="server">     
+                            <div class="G5 lightSpeedIn" id="TaskDatos" runat="server">     
                                 <div class="G5-container">           
                                     <div class="G5-image i_send_csv">
                                         <div class="G5-texto">
@@ -89,7 +88,7 @@
                                 </div> 
                             </div>
                         
-                            <div class="G5 animated lightSpeedIn" id="TaskHelp" runat="server">
+                            <div class="G5 lightSpeedIn" id="TaskHelp" runat="server">
                                     <div class="G5-container">
                                 <div class="G5-image i_docs">
                                         <div class="G5-texto">
@@ -105,7 +104,7 @@
                 </div>
                 <h4 class="tituloTarea">Tablas Auxiliares</h4>
                 <div class="grupoTareas">
-                        <div id="TaskUnidades" class="G5 animated lightSpeedIn" runat="server">
+                        <div id="TaskUnidades" class="G5 lightSpeedIn" runat="server">
                                 <div class="G5-container">
                             <div class="G5-image i_tables">      
                                     <div class="G5-texto">  
@@ -119,7 +118,7 @@
                             </div>        
                         </div>        
                             
-                            <div id="TaskRepreROPO" class="G5 animated lightSpeedIn" runat="server">
+                            <div id="TaskRepreROPO" class="G5 lightSpeedIn" runat="server">
                                     <div class="G5-container">
                             <div class="G5-image i_tables">        
                                     <div class="G5-texto">
@@ -135,7 +134,7 @@
                 </div>
                 <h4 class="tituloTarea">Administración</h4>
                 <div class="grupoTareas">
-                        <div class="G5 animated lightSpeedIn" id="TaskUsers" runat="server">
+                        <div class="G5 lightSpeedIn" id="TaskUsers" runat="server">
                                 <div class="G5-container">
                             <div class="G5-image i_users">         
                                     <div class="G5-texto">
@@ -149,7 +148,7 @@
                             </div>        
                         </div> 
                             
-                            <div class="G5 animated lightSpeedIn" id="TaskAdmin" runat="server"> 
+                            <div class="G5 lightSpeedIn" id="TaskAdmin" runat="server"> 
                                     <div class="G5-container">
                             <div class="G5-image i_admin">         
                                     <div class="G5-texto">                   
