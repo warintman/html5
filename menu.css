@@ -56,7 +56,11 @@ header nav {
 	width: 268px;
 }
 
-.itemAncho:hover {
+.itemAncho:hover{
+	width: 168px;
+}
+
+.itemAlto:hover {
 	height: 100px;
 }
 

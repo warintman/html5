@@ -1,9 +1,10 @@
 (function(){
+    var _logout = '/default.aspx?action=logout';
     //barra de navegacion (perfil + usuario)
     document.getElementById('UserTool').addEventListener("mouseover",function mouseoverut(){document.getElementById('ToolBar').style.display='block';});
     document.getElementById('UserTool').addEventListener("mouseout",function mouseoverut(){document.getElementById('ToolBar').style.display='none';});
     //salida de la aplicacion
-    document.getElementById('CloseSesionTool').addEventListener("click",function logout(){location.href = window.location.origin + '/' + window.location.pathname.split("/")[1] + '/default.aspx?action=logout';});
+    document.getElementById('CloseSesionTool').addEventListener("click",function logout(){location.href = window.location.origin + '/' + window.location.pathname.split("/")[1] + _logout;});
     //el menu
     document.getElementById('menuOpen').addEventListener("click",function openMenu(){        
         document.getElementById('menuOpen').style.display='none';
