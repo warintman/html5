@@ -69,8 +69,7 @@ p{margin:5px 0px 5px 0px}
 }
 .Pie{border-top:solid 1px #DBDCE3;}
 
-.HeaderContainer{  
-  /*width: 100%;*/
+.HeaderContainer{    
   margin: auto;  
   display: flex;
   justify-content: space-between;

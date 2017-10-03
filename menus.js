@@ -13,11 +13,9 @@
     GenerateMenu(_Menus);
 
     function GenerateInicio() {
-        //Padre
-        //var MenuInicio = { "tituloPadre": "", "id": "", "claseIcono": "", "claseAnimacion": "", "claseAncho": "", "claseAlto": "", "hijos": []};
+        //Padre { "tituloPadre": "", "id": "", "claseIcono": "", "claseAnimacion": "", "claseAncho": "", "claseAlto": "", "hijos": []};
         var MenuInicio = { "titulo": "Inicio", "id": "", "claseIcono": "icon_home", "claseAnimacion": "", "claseAncho": "", "claseAlto": "itemAlto", "hijos": []};
-        //Hijos
-        //var HijoInicio = { "titulo": "", "href": "", "clase": ""};
+        //Hijos { "titulo": "", "href": "", "clase": ""};
         var HijoInicio = { "titulo": "Inicio", "href": "", "clase": ""};
         var HijoDocumentacion = { "titulo": "Documentación", "href": "", "clase": ""};
 
@@ -59,7 +57,7 @@
 
     function GenerateMenu(Menus) {
         //generar esto como hijos de menu
-        //<div class="item itemAlto">
+        //<div class="item itemAlto" id="">
         //    <a class="linkIcon icon_home"></a>
         //    <div class="item_content">
         //        <h2 class="pulse">Inicio</h2>
