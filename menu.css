@@ -116,6 +116,7 @@ header nav {
 .mouseout {
   -webkit-transition: -webkit-transform 1s linear;
   -moz-transition: -moz-transform 1s linear;
+  -ms-transition: ms-transform 1s linear;
   -o-transition: -o-transform 1s linear;
   transition: transform 1s linear;
 }
@@ -123,8 +124,9 @@ header nav {
 .mouseout:hover {
   -webkit-transition: -webkit-transform 1s linear;
   -moz-transition: -moz-transform 1s linear;
+  -ms-transition: ms-transform 1s linear;
   -o-transition: -o-transform 1s linear;
-  transition: transform 1s linear;
+  transition: transform 1s linear;  
   -webkit-transform: rotate(360deg);
   -moz-transform: rotate(360deg);
   -ms-transform: rotate(360deg);
@@ -174,14 +176,6 @@ header nav {
 
 @-ms-keyframes spinOut {
     from { -ms-transform: rotate(0deg); }
-    11% {      transform: rotate(40deg);    }  
-    22% {      transform: rotate(80deg);    }  
-    33% {      transform: rotate(120deg);    }  
-    44% {      transform: rotate(160deg);    }
-    55% {      transform: rotate(200deg);    }
-	66% {      transform: rotate(240deg);    }
-	77% {      transform: rotate(280deg);    }
-	88% {      transform: rotate(320deg);    }
     to { -ms-transform: rotate(360deg); }
 }
 @-moz-keyframes spinOut {

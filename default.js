@@ -36,16 +36,19 @@
     //poner el chrome con --allow-file-access-from-files para probarlo en local
     mqEvents(handleMediaChange);
 
-    //icono del menu rodante
-    document.querySelectorAll('.item').forEach(function(currentValue){
-        currentValue.addEventListener("mouseover",function mouseovermenuitem(){ 
+    //icono del menu rodante, el bucle forEach no va en IE ni EDGE
+    //https://stackoverflow.com/questions/27065659/why-does-foreach-not-work-in-an-iframe-in-ie11
+    var itemsMenu = document.querySelectorAll('.item');
+    var i;
+    for (i = 0; i < itemsMenu.length; i++) {
+        itemsMenu[i].addEventListener("mouseover",function mouseovermenuitem(){ 
             this.children[0].classList.remove('unrollable');     
             this.children[0].classList.add('rollable');       
         });
-        currentValue.addEventListener("mouseout",function mouseoutmenuitem(){ 
+        itemsMenu[i].addEventListener("mouseout",function mouseoutmenuitem(){ 
             this.children[0].classList.remove('rollable');
             this.children[0].classList.add('unrollable');            
         });
-    });
+    }
 
 })();
