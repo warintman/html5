@@ -88,10 +88,16 @@ p{margin:5px 0px 5px 0px}
 .HeaderContainer .Titulo{
 	font-weight:bold;
 	font-size:3em;
-	text-align: center;
+  text-align: center;
+  
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
-#titulo {display: inline-flex;}
-.HeaderContainer .subTitulo{font-size: 50%;}
+#titulo {width: 90%;}
+.HeaderContainer .subTitulo{font-size: 50%;width: 100%;}
 
 .ToolBar{color:black;width:100%;}
 .ToolBar{

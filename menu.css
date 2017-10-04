@@ -17,7 +17,6 @@ header nav {
     flex-direction: row;
 }
 
-.VacioLeft {display: none;}
 .VacioRight {display: block;}
 
 .menu{
@@ -216,14 +215,18 @@ header nav {
     .HeaderContainer  {
         flex-direction: column;
     }
-    .VacioLeft {display: none;}
     .VacioRight {display: none;}
+    *::-ms-backdrop, .HeaderContainer {  
+        min-height: 12em; /* IE 11 */
+    }
 }
 
 @media screen and (max-width: 660px) {
     .HeaderContainer {
-        flex-direction: row;
-        /*display: block;*/
+        flex-direction: row;        
+    }
+    *::-ms-backdrop, .HeaderContainer {  
+        min-height: 7.5em; /* IE 11 */
     }
     .HeaderContainer .menu {
         width: 100%;
@@ -234,7 +237,7 @@ header nav {
         align-items: stretch;        
     }
     .iconoMenu {
-        display:inline-block;
+        display:inline-flex;
     }    
     #menuOpen {
         display:block;
@@ -251,8 +254,7 @@ header nav {
     }
     .menuHidden {display: none;}
     .menuVisible {display: flex;}
-    .VacioLeft {display: block;}
-    .VacioRight {display: block;}
+    .VacioRight {display: none;}
 }
 
 @media screen and (max-width: 435px) {
