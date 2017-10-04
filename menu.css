@@ -95,13 +95,14 @@ header nav {
     margin-left:50px;
     padding-left: 5px;
     background:transparent;    
+    text-align: center;
 }
 .item_content h2{
     color:#6F6C66;
     text-shadow: 1px 1px 1px #fff;
     background-color:transparent;
     font-size:12px;
-	margin: 8px 0px 0px 0px;
+    margin: 8px 0px 0px 0px;    
 }
 .item_content a{
     background-color:transparent;    
@@ -114,6 +115,10 @@ header nav {
 }
 .item_content a:hover{
     color:#0b965b;
+}
+
+.item_content p{
+    text-align: left;
 }
 
 .mouseout {
