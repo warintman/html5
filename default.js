@@ -13,12 +13,12 @@
         document.getElementById('menu').classList.add('menuVisible');        
     });
     document.getElementById('menuClose').addEventListener("click",closeMenu);    
-    function closeMenu(){
-        EliminaRotacionMenu();
+    function closeMenu(){        
         document.getElementById('menuOpen').style.display='block';
         document.getElementById('menuClose').style.display='none';
         document.getElementById('menu').classList.remove('menuVisible');
         document.getElementById('menu').classList.add('menuHidden');
+        EliminaRotacionMenu();
     }
 
     var handleMediaChange = function (mql) {
@@ -26,7 +26,7 @@
         // For some reason Firefox has trouble always running this code.
         // The console.log seems to help it.
         // TODO: Figure out what the hell that's all about
-        //console.log();
+        //console.log();        
         if (mql.matches) EliminaRotacionMenu();
         if (mql.matches && (mql.media==='screen and (max-width: 660px)' || mql.media==='screen and (max-width:660px)')) {
             //si estaba abierto el menu, lo cierro
@@ -42,14 +42,25 @@
     //https://stackoverflow.com/questions/27065659/why-does-foreach-not-work-in-an-iframe-in-ie11
     var itemsMenu = document.querySelectorAll('.item');
     var i;
-    for (i = 0; i < itemsMenu.length; i++) {
-        itemsMenu[i].addEventListener("mouseover",function mouseovermenuitem(){             
-            if (this.children[0].classList.contains('unrollable')) this.children[0].classList.remove('unrollable');     
-            this.children[0].classList.add('rollable');       
+    for (i = 0; i < itemsMenu.length; i++) {        
+        itemsMenu[i].addEventListener("mouseover",function mouseovermenuitem(){  
+            //si mide mas pixels que recogido-> return     
+            if (this.offsetWidth!==52) return;    
+            var _elem = this.children[0];    
+            _elem.classList.add('rollable');            
+            _elem.onCSSAnimationEnd(function()
+            {
+                _elem.classList.remove('rollable');
+                _elem.removeEventListener("mouseover",mouseovermenuitem);                
+            });
         });
-        itemsMenu[i].addEventListener("mouseout",function mouseoutmenuitem(){             
-            if (this.children[0].classList.contains('rollable')) this.children[0].classList.remove('rollable');
-            this.children[0].classList.add('unrollable');                       
+        itemsMenu[i].addEventListener("mouseleave",function mouseoutmenuitem(){
+            this.children[0].classList.add('unrollable');
+            var _elem = this.children[0];
+            _elem.onCSSAnimationEnd(function()
+            {
+                _elem.classList.remove('unrollable');                
+            });
         });
     }
 
@@ -58,6 +69,7 @@
         var itemsMenu = document.querySelectorAll('.item');
         var i;
         for (i = 0; i < itemsMenu.length; i++) {
+            if (itemsMenu[i].children[0].classList.contains('rollable')) itemsMenu[i].children[0].classList.remove('rollable');
             if (itemsMenu[i].children[0].classList.contains('unrollable')) itemsMenu[i].children[0].classList.remove('unrollable');
         }
     }
