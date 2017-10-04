@@ -90,6 +90,7 @@ p{margin:5px 0px 5px 0px}
 	font-size:3em;
 	text-align: center;
 }
+#titulo {display: inline-flex;}
 .HeaderContainer .subTitulo{font-size: 50%;}
 
 .ToolBar{color:black;width:100%;}

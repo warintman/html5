@@ -223,7 +223,7 @@ header nav {
 @media screen and (max-width: 660px) {
     .HeaderContainer {
         flex-direction: row;
-        display: block;
+        /*display: block;*/
     }
     .HeaderContainer .menu {
         width: 100%;
