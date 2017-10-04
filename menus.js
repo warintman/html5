@@ -69,13 +69,13 @@
         for (i = 0; i < Menus.length; i++) {
             var divMenuItem = document.createElement('div');
             divMenuItem.className = 'item ' + Menus[i].claseAlto || '' + ' ' + Menus[i].claseAncho || '';
-            divMenuItem.id = Menus[i].id || '';
+            if (Menus[i].id && Menus[i].id.length>0) divMenuItem.id = Menus[i].id || '';
             var icono = document.createElement('a');
             icono.className = 'linkIcon ' + Menus[i].claseIcono || '';
             var divItemcontent = document.createElement('div');
             divItemcontent.className='item_content';
             var h2Titulo = document.createElement('h2');
-            h2Titulo.className = Menus[i].claseAnimacion || '';
+            if (Menus[i].claseAnimacion && Menus[i].claseAnimacion.length>0) h2Titulo.className = Menus[i].claseAnimacion || '';
             h2Titulo.innerText = Menus[i].titulo || '';
             divItemcontent.appendChild(h2Titulo);
             if (Menus[i].hijos && Menus[i].hijos.length>0) {
@@ -84,8 +84,8 @@
                     var pItem = document.createElement('p');
                     var aItem = document.createElement('a');
                     aItem.href = Menus[i].hijos[j].href || '';
-                    aItem.innerText = Menus[i].hijos[j].titulo || '';
-                    aItem.className = Menus[i].hijos[j].clase || '';
+                    if (Menus[i].hijos[j].titulo && Menus[i].hijos[j].titulo.length>0) aItem.innerText = Menus[i].hijos[j].titulo || '';
+                    if (Menus[i].hijos[j].clase && Menus[i].hijos[j].clase.length>0) aItem.className = Menus[i].hijos[j].clase || '';
                     pItem.appendChild(aItem);
                     divItemcontent.appendChild(pItem);
                 }
