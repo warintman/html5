@@ -121,6 +121,11 @@ header nav {
     text-align: left;
 }
 
+.cajaClose {
+    width: 220px;
+    height: 40px;
+}
+
 .mouseout {
   -webkit-transition: -webkit-transform 1s linear;
   -moz-transition: -moz-transform 1s linear;
@@ -241,6 +246,9 @@ header nav {
         align-content: flex-start;
         align-items: stretch;        
     }
+    .item_content p{
+        margin: 5px 0px 1em 0px;
+    }
     .iconoMenu {
         display:inline-flex;
     }    
@@ -256,7 +264,7 @@ header nav {
         border-radius: 90px;
         border: 1px solid #60C442;
 
-    }
+    }    
     .menuHidden {display: none;}
     .menuVisible {display: flex;}
     .VacioRight {display: none;}

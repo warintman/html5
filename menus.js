@@ -29,7 +29,7 @@
         var HijoEstadisticas = { "titulo": "Estadísticas de acceso", "href": "", "clase": ""};
         MenuAdministracion.hijos.push(HijoUsuarios, HijoEstadisticas);
         var MenuPerfil = { "titulo": "Perfil de Usuario", "id": "UserTool", "claseIcono": "icon_user", "claseAnimacion": "", "claseAncho": "", "claseAlto": "", "hijos": []};
-        var MenuClose = { "titulo": "Cerrar Sesión", "id": "CloseSesionTool", "claseIcono": "icon_logout", "claseAnimacion": "pulse", "claseAncho": "", "claseAlto": "", "hijos": []};
+        var MenuClose = { "titulo": "Cerrar Sesión", "id": "CloseSesionTool", "claseIcono": "icon_logout", "claseAnimacion": "pulse cajaClose", "claseAncho": "", "claseAlto": "", "hijos": []};
         var _menu = [];
         _menu.push(MenuAdministracion, MenuPerfil, MenuClose);
         return _menu;
