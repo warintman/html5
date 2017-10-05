@@ -73,6 +73,13 @@ header nav {
     height: 90px; /* alto del item hover menos el margen*/
 }
 
+.tituloAlto {
+    height: 40px; /* para los menu items solo con titulo y que vayan en el centro del todo*/
+    display: table-cell;
+    vertical-align: middle;
+    padding-top: 10px;
+}
+
 .icon_home{
     background:transparent url(home.png) no-repeat center left;
 }
@@ -100,6 +107,7 @@ header nav {
     margin-left:2em;    
     background:transparent;    
     text-align: center;
+    display: table;
 }
 .item_content h2{
     color:#6F6C66;

@@ -13,8 +13,8 @@
     GenerateMenu(_Menus);
 
     function GenerateInicio() {
-        //Padre { "tituloPadre": "", "id": "", "claseIcono": "", "claseAnimacion": "", "claseAncho": "", "claseAlto": "", "hijos": []};
-        var MenuInicio = { "titulo": "Inicio", "id": "", "claseIcono": "icon_home", "claseAnimacion": "", "claseAncho": "", "claseAlto": "itemAlto", "hijos": []};
+        //Padre { "tituloPadre": "", "id": "", "claseIcono": "", "claseTitulo": "", "claseMenuItem": "", "hijos": []};
+        var MenuInicio = { "titulo": "Inicio", "id": "", "claseIcono": "icon_home", "claseTitulo": "", "claseMenuItem": "itemAlto", "hijos": []};
         //Hijos { "titulo": "", "href": "", "clase": ""};
         var HijoInicio = { "titulo": "Inicio", "href": "", "clase": ""};
         var HijoDocumentacion = { "titulo": "Documentación", "href": "", "clase": ""};
@@ -24,12 +24,12 @@
     }
 
     function GeneratePerfilClose() {
-        var MenuAdministracion = { "titulo": "Administración", "id": "", "claseIcono": "icon_admin", "claseAnimacion": "", "claseAncho": "", "claseAlto": "itemAlto", "hijos": []};
+        var MenuAdministracion = { "titulo": "Administración", "id": "", "claseIcono": "icon_admin", "claseTitulo": "", "claseMenuItem": "itemAlto", "hijos": []};
         var HijoUsuarios = { "titulo": "Usuarios", "href": "", "clase": ""};
         var HijoEstadisticas = { "titulo": "Estadísticas de acceso", "href": "", "clase": ""};
         MenuAdministracion.hijos.push(HijoUsuarios, HijoEstadisticas);
-        var MenuPerfil = { "titulo": "Perfil de Usuario", "id": "UserTool", "claseIcono": "icon_user", "claseAnimacion": "", "claseAncho": "", "claseAlto": "", "hijos": []};
-        var MenuClose = { "titulo": "Cerrar Sesión", "id": "CloseSesionTool", "claseIcono": "icon_logout", "claseAnimacion": "pulse cajaClose", "claseAncho": "", "claseAlto": "", "hijos": []};
+        var MenuPerfil = { "titulo": "Perfil de Usuario", "id": "UserTool", "claseIcono": "icon_user", "claseTitulo": "tituloAlto", "claseMenuItem": "", "hijos": []};
+        var MenuClose = { "titulo": "Cerrar Sesión", "id": "CloseSesionTool", "claseIcono": "icon_logout", "claseTitulo": "pulse cajaClose tituloAlto", "claseMenuItem": "", "hijos": []};
         var _menu = [];
         _menu.push(MenuAdministracion, MenuPerfil, MenuClose);
         return _menu;
@@ -38,15 +38,15 @@
     function GenerateMenusIntemedios() {
         var _menu = [];
 
-        var MenuTransaccion = { "titulo": "Transacciones", "id": "", "claseIcono": "icon_transaccion", "claseAnimacion": "", "claseAncho": "", "claseAlto": "itemAlto", "hijos": []};
+        var MenuTransaccion = { "titulo": "Transacciones", "id": "", "claseIcono": "icon_transaccion", "claseTitulo": "", "claseMenuItem": "itemAlto", "hijos": []};
         var HijoTransaccion1 = { "titulo": "Nueva transacción", "href": "", "clase": ""};
         var HijoTransaccion2 = { "titulo": "Consulta de transacciones", "href": "", "clase": ""};
         MenuTransaccion.hijos.push(HijoTransaccion1, HijoTransaccion2);
-        var MenuCSV = { "titulo": "Carga de Datos", "id": "", "claseIcono": "icon_carga", "claseAnimacion": "", "claseAncho": "", "claseAlto": "itemAlto", "hijos": []};
+        var MenuCSV = { "titulo": "Carga de Datos", "id": "", "claseIcono": "icon_carga", "claseTitulo": "", "claseMenuItem": "itemAlto", "hijos": []};
         var HijoCSV1 = { "titulo": "Nueva carga", "href": "", "clase": ""};
         var HijoCSV2 = { "titulo": "Consulta de cargas", "href": "", "clase": ""};
         MenuCSV.hijos.push(HijoCSV1, HijoCSV2);
-        var MenuAux = { "titulo": "Tablas Auxiliares", "id": "", "claseIcono": "icon_tablasAux", "claseAnimacion": "", "claseAncho": "", "claseAlto": "itemAlto", "hijos": []};
+        var MenuAux = { "titulo": "Tablas Auxiliares", "id": "", "claseIcono": "icon_tablasAux", "claseTitulo": "", "claseMenuItem": "itemAlto", "hijos": []};
         var HijoAux1 = { "titulo": "Tipos de unidades", "href": "", "clase": ""};
         var HijoAux2 = { "titulo": "Representantes de entidades ROPO", "href": "", "clase": ""};
         var HijoAux3 = { "titulo": "Entidades de baja con usuarios activos", "href": "", "clase": ""};
@@ -68,14 +68,14 @@
         var i;
         for (i = 0; i < Menus.length; i++) {
             var divMenuItem = document.createElement('div');
-            divMenuItem.className = 'item ' + Menus[i].claseAlto || '' + ' ' + Menus[i].claseAncho || '';
+            divMenuItem.className = 'item ' + Menus[i].claseMenuItem || '';
             if (Menus[i].id && Menus[i].id.length>0) divMenuItem.id = Menus[i].id || '';
             var icono = document.createElement('a');
             icono.className = 'linkIcon ' + Menus[i].claseIcono || '';
             var divItemcontent = document.createElement('div');
             divItemcontent.className='item_content';
             var h2Titulo = document.createElement('h2');
-            if (Menus[i].claseAnimacion && Menus[i].claseAnimacion.length>0) h2Titulo.className = Menus[i].claseAnimacion || '';
+            if (Menus[i].claseTitulo && Menus[i].claseTitulo.length>0) h2Titulo.className = Menus[i].claseTitulo || '';
             h2Titulo.innerText = Menus[i].titulo || '';
             divItemcontent.appendChild(h2Titulo);
             if (Menus[i].hijos && Menus[i].hijos.length>0) {
