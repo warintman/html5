@@ -47,7 +47,8 @@
             //si mide mas pixels que recogido-> return     
             if (this.offsetWidth!==52) return;    
             var _elem = this.children[0];    
-            _elem.classList.add('rollable');            
+            _elem.classList.add('rollable');
+            if (this.classList.contains('itemAlto')) _elem.classList.add('iconAlto');        
             _elem.onCSSAnimationEnd(function()
             {
                 _elem.classList.remove('rollable');
@@ -55,8 +56,9 @@
             });
         });
         itemsMenu[i].addEventListener("mouseleave",function mouseoutmenuitem(){
-            this.children[0].classList.add('unrollable');
             var _elem = this.children[0];
+            _elem.classList.add('unrollable');        
+            if (_elem.classList.contains('iconAlto')) _elem.classList.remove('iconAlto');
             _elem.onCSSAnimationEnd(function()
             {
                 _elem.classList.remove('unrollable');                

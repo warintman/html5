@@ -56,7 +56,7 @@ header nav {
 }
 
 .itemAncho:hover{
-	width: 168px;
+	width: 168px; /*para un ancho personalizado*/
 }
 
 .itemAlto:hover {
@@ -68,32 +68,36 @@ header nav {
     width:48px;
     height:48px;
 }
+
+.iconAlto {
+    height: 90px;
+}
+
 .icon_home{
-    background:transparent url(home.png) no-repeat top left;
+    background:transparent url(home.png) no-repeat center left;
 }
 .icon_logout{
-    background:transparent url(logout.png) no-repeat top left;
+    background:transparent url(logout.png) no-repeat center left;
 }
 .icon_user{
-    background:transparent url(user.png) no-repeat top left;
+    background:transparent url(user.png) no-repeat center left;
 }
 .icon_admin{
-    background:transparent url(userAdmin.png) no-repeat top left;
+    background:transparent url(userAdmin.png) no-repeat center left;
 }
 .icon_tablasAux{
-    background:transparent url(tablasAux.png) no-repeat top left;
+    background:transparent url(tablasAux.png) no-repeat center left;
 }
 .icon_carga{
-    background:transparent url(cargaDatos.png) no-repeat top left;
+    background:transparent url(cargaDatos.png) no-repeat center left;
 }
 .icon_transaccion {
-	background:transparent url(transaccion.png) no-repeat top left;
+	background:transparent url(transaccion.png) no-repeat center left;
 }
 .item_content{     
-    width:220px;
+    width:250px; /*igual q item hover menos el margen izquierdo del icono*/
     overflow:hidden;
-    margin-left:50px;
-    padding-left: 5px;
+    margin-left:2em;    
     background:transparent;    
     text-align: center;
 }
@@ -107,7 +111,7 @@ header nav {
 .item_content a{
     background-color:transparent;    
     margin-right:7px;
-    margin-top:3px;
+    margin-top:3px;    
     color:#9B9A95;
     text-shadow: 1px 1px 1px #fff;
     text-decoration:none;
@@ -118,11 +122,11 @@ header nav {
 }
 
 .item_content p{
-    text-align: left;
+    margin-left:4em;
+    text-align: left;    
 }
 
-.cajaClose {
-    width: 220px;
+.cajaClose {    
     height: 40px;
 }
 
@@ -247,7 +251,7 @@ header nav {
         align-items: stretch;        
     }
     .item_content p{
-        margin: 5px 0px 1em 0px;
+        margin: 5px 0px 1em 4em;
     }
     .iconoMenu {
         display:inline-flex;
