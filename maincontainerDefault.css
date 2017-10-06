@@ -65,7 +65,7 @@
 .i_admin    { background-position: -240px -144px }  
 .i_send_csv { background-position: -46px -144px }
 
-#Div1:hover #consulta {    
+#Transaccion:hover #TransaccionConsulta {    
     display: inline-block;
     -webkit-transform: translateZ(0);
     -ms-transform: translateZ(0);
@@ -77,7 +77,7 @@
     animation-fill-mode: both;
 }
 
-#TaskDatos:hover #consulta1 {    
+#TaskCSV:hover #CSVconsulta {    
     display: inline-block;
     -webkit-transform: translateZ(0);
     -ms-transform: translateZ(0);

@@ -1,8 +1,7 @@
 (function(){
 
     var _Tareas = [];
-    //_Tareas.push(GenerateInicio());
-    //_Tareas = _Tareas.concat(GenerateMenusIntemedios(),GeneratePerfilClose());
+    _Tareas = _Tareas.concat(GenerateTareasComunes(),GenerateTablasAuxiliares(),GenerateAdministracion());
     GenerateTareas(_Tareas);
     
     function GenerateTareas(_Tareas) {
@@ -31,6 +30,7 @@
         var i;
         for (i = 0; i < _Tareas.length; i++) {
             var h4TareaPadreItem = document.createElement('h4');
+            h4TareaPadreItem.className = 'tituloTarea';
             if (_Tareas[i].id && _Tareas[i].id.length>0) h4TareaPadreItem.id = _Tareas[i].id;
             h4TareaPadreItem.innerText = _Tareas[i].titulo || '';
             document.getElementById('idFlexMainContainer').appendChild(h4TareaPadreItem);
@@ -87,11 +87,57 @@
         }
     }
         /* TareaPadre {"id": "", "titulo": "", "tareas": []} */
-        /* Tarea {"id": "", "claseAnimacion": "", "claseIcono": "", "tituloHTML": "", "href": "", "textoHTML": "", "Enlaces": []} */
+        /* Tarea {"id": "", "claseAnimacion": "", "claseIcono": "", "tituloHTML": "", "href": "", "textoHTML": "", "enlaces": []} */
         /* Enlace {"id": "", "href": "", "textoHTML": ""} */
+    function GenerateAdministracion() {
+        var Administracion = {"id": "AdminUsers", "titulo": "Administración", "tareas": []};
+        var AdministracionTarea = {"id": "TaskUsers", "claseAnimacion": "lightSpeedIn", "claseIcono": "i_users", "tituloHTML": "Gestión de usuarios", "href": "Regeus.UAdmin.aspx", "textoHTML": "Permite a los <b>administradores</b> la gestión de usuarios.", "enlaces": []};
+        var EnlaceTarea = {"id": "", "href": "Regeus.UAdmin.aspx", "textoHTML": "Ir a la página"};
 
-        
+        AdministracionTarea.enlaces.push(EnlaceTarea);
+        Administracion.tareas.push(AdministracionTarea);
 
-    
+        return Administracion;
+    }
+
+    function GenerateTareasComunes() {
+        var Comunes = {"id": "", "titulo": "Tareas comunes", "tareas": []};
+
+        var TransaccionesTarea = {"id": "Transaccion", "claseAnimacion": "lightSpeedIn", "claseIcono": "i_send_csv", "tituloHTML": "Transacciones", "href": "pages/Transaccion.aspx", "textoHTML": "Permite gestionar el alta, edición o borrado de las transacciones.", "enlaces": []};
+        var TransaccionesEnlaceNuevo = {"id": "NCarga", "href": "pages/NTransaccion.aspx", "textoHTML": "Nueva transacción"};
+        var TransaccionesEnlaceConsulta = {"id": "TransaccionConsulta", "href": "pages/Transaccion.aspx", "textoHTML": "Consulta de transacciones"};
+        TransaccionesTarea.enlaces.push(TransaccionesEnlaceNuevo);
+        TransaccionesTarea.enlaces.push(TransaccionesEnlaceConsulta);
+        Comunes.tareas.push(TransaccionesTarea);
+
+        var CSVTarea = {"id": "TaskCSV", "claseAnimacion": "lightSpeedIn", "claseIcono": "i_send_csv", "tituloHTML": "Carga de datos", "href": "pages/Data/list.aspx", "textoHTML": "Permite realizar la carga y/o modificación masiva de los datos de las transacciones por medio de archivos de texto (<b>.csv</b>).", "enlaces": []};        
+        var CSVEnlaceNuevo = {"id": "", "href": "pages/Data/Send.aspx", "textoHTML": "Nueva carga"};
+        var CSVEnlaceConsulta = {"id": "CSVconsulta", "href": "pages/Data/list.aspx", "textoHTML": "Consulta de cargas"};
+        CSVTarea.enlaces.push(CSVEnlaceNuevo);
+        CSVTarea.enlaces.push(CSVEnlaceConsulta);
+        Comunes.tareas.push(CSVTarea);
+
+        var DocumentosTarea = {"id": "TaskHelp", "claseAnimacion": "lightSpeedIn", "claseIcono": "i_docs", "tituloHTML": "Descarga de documentos", "href": "pages/Documentacion.aspx", "textoHTML": "Manuales del funcionamiento de la aplicación y documentos, archivos y guías útiles para la carga masiva de datos.", "enlaces": []};
+        var DocumentosEnlace = {"id": "", "href": "pages/Documentacion.aspx", "textoHTML": "Ir a la página"};
+        DocumentosTarea.enlaces.push(DocumentosEnlace);        
+        Comunes.tareas.push(DocumentosTarea);
+
+        return Comunes;
+    }
+
+    function GenerateTablasAuxiliares() {
+        var Auxiliares = {"id": "groupAuxiliares", "titulo": "Tablas auxiliares", "tareas": []};
+        var UnidadesTarea = {"id": "TaskUnidades", "claseAnimacion": "lightSpeedIn", "claseIcono": "i_tables", "tituloHTML": "Tipos de unidades", "href": "pages/Unidad.aspx", "textoHTML": "Permite gestionar el alta, edición o borrado de los tipos de unidades.", "enlaces": []};
+        var UnidadesEnlace = {"id": "", "href": "pages/Unidad.aspx", "textoHTML": "Ir a la página"};
+        UnidadesTarea.enlaces.push(UnidadesEnlace);
+        Auxiliares.tareas.push(UnidadesTarea);
+
+        var RepresentantesTarea = {"id": "TaskRepreROPO", "claseAnimacion": "lightSpeedIn", "claseIcono": "i_tables", "tituloHTML": "Representantes de entidades ROPO", "href": "pages/RepreROPO.aspx", "textoHTML": "Permite gestionar el alta, edición o borrado de los representantes de entidades ROPO que tendrán acceso a la aplicación.", "enlaces": []};        
+        var RepresentantesEnlace = {"id": "", "href": "pages/RepreROPO.aspx", "textoHTML": "Ir a la página"};
+        RepresentantesTarea.enlaces.push(RepresentantesEnlace);
+        Auxiliares.tareas.push(RepresentantesTarea);
+
+        return Auxiliares;
+    }
 
 })();

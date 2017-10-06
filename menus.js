@@ -5,7 +5,9 @@
     document.getElementById('subtitulo').innerText = 'Registro Electrónico de Transacciones y Operaciones';
     document.getElementById('footerTexto').innerText = 'Ministerio de Agricultura y Pesca, Alimentación y Medio Ambiente';
     document.getElementById('perfil').innerText = 'Perfil: Administrador';
-    document.getElementById('usuario').innerText = 'Usuario: 11111111H Admin Admini Admino';
+    document.getElementById('usuario').innerText = 'Usuario: 11111111H Admin Admini Admino';    
+    var estadisticasHREF = window.location.origin + '/cuadrodemando/?apli=' + 'RETO';
+    var urlAplicacion = window.location.origin + '/' + window.location.pathname.split("/")[1] + '/';
     //menus
     var _Menus = [];
     _Menus.push(GenerateInicio());
@@ -16,8 +18,8 @@
         //Padre { "tituloPadre": "", "id": "", "claseIcono": "", "claseTitulo": "", "claseMenuItem": "", "hijos": []};
         var MenuInicio = { "titulo": "Inicio", "id": "", "claseIcono": "icon_home", "claseTitulo": "", "claseMenuItem": "itemAlto", "hijos": []};
         //Hijos { "titulo": "", "href": "", "clase": ""};
-        var HijoInicio = { "titulo": "Inicio", "href": "", "clase": ""};
-        var HijoDocumentacion = { "titulo": "Documentación", "href": "", "clase": ""};
+        var HijoInicio = { "titulo": "Inicio", "href": urlAplicacion + "default.html", "clase": ""};
+        var HijoDocumentacion = { "titulo": "Documentación", "href": urlAplicacion + "pages/Documentacion.aspx", "clase": ""};
 
         MenuInicio.hijos.push(HijoInicio, HijoDocumentacion);
         return MenuInicio;
@@ -25,8 +27,8 @@
 
     function GeneratePerfilClose() {
         var MenuAdministracion = { "titulo": "Administración", "id": "", "claseIcono": "icon_admin", "claseTitulo": "", "claseMenuItem": "itemAlto", "hijos": []};
-        var HijoUsuarios = { "titulo": "Usuarios", "href": "", "clase": ""};
-        var HijoEstadisticas = { "titulo": "Estadísticas de acceso", "href": "", "clase": ""};
+        var HijoUsuarios = { "titulo": "Usuarios", "href": urlAplicacion + "Regeus.UAdmin.aspx", "clase": ""};
+        var HijoEstadisticas = { "titulo": "Estadísticas de acceso", "href": estadisticasHREF, "clase": ""};
         MenuAdministracion.hijos.push(HijoUsuarios, HijoEstadisticas);
         var MenuPerfil = { "titulo": "Perfil de Usuario", "id": "UserTool", "claseIcono": "icon_user", "claseTitulo": "tituloAlto", "claseMenuItem": "", "hijos": []};
         var MenuClose = { "titulo": "Cerrar Sesión", "id": "CloseSesionTool", "claseIcono": "icon_logout", "claseTitulo": "pulse cajaClose tituloAlto", "claseMenuItem": "", "hijos": []};
@@ -39,17 +41,17 @@
         var _menu = [];
 
         var MenuTransaccion = { "titulo": "Transacciones", "id": "", "claseIcono": "icon_transaccion", "claseTitulo": "", "claseMenuItem": "itemAlto", "hijos": []};
-        var HijoTransaccion1 = { "titulo": "Nueva transacción", "href": "", "clase": ""};
-        var HijoTransaccion2 = { "titulo": "Consulta de transacciones", "href": "", "clase": ""};
+        var HijoTransaccion1 = { "titulo": "Nueva transacción", "href": urlAplicacion + "pages/NTransaccion.aspx", "clase": ""};
+        var HijoTransaccion2 = { "titulo": "Consulta de transacciones", "href": urlAplicacion + "pages/Transaccion.aspx", "clase": ""};
         MenuTransaccion.hijos.push(HijoTransaccion1, HijoTransaccion2);
         var MenuCSV = { "titulo": "Carga de Datos", "id": "", "claseIcono": "icon_carga", "claseTitulo": "", "claseMenuItem": "itemAlto", "hijos": []};
-        var HijoCSV1 = { "titulo": "Nueva carga", "href": "", "clase": ""};
-        var HijoCSV2 = { "titulo": "Consulta de cargas", "href": "", "clase": ""};
+        var HijoCSV1 = { "titulo": "Nueva carga", "href": urlAplicacion + "pages/Data/Send.aspx", "clase": ""};
+        var HijoCSV2 = { "titulo": "Consulta de cargas", "href": urlAplicacion + "pages/Data/list.aspx", "clase": ""};
         MenuCSV.hijos.push(HijoCSV1, HijoCSV2);
         var MenuAux = { "titulo": "Tablas Auxiliares", "id": "", "claseIcono": "icon_tablasAux", "claseTitulo": "", "claseMenuItem": "itemAlto", "hijos": []};
-        var HijoAux1 = { "titulo": "Tipos de unidades", "href": "", "clase": ""};
-        var HijoAux2 = { "titulo": "Representantes de entidades ROPO", "href": "", "clase": ""};
-        var HijoAux3 = { "titulo": "Entidades de baja con usuarios activos", "href": "", "clase": ""};
+        var HijoAux1 = { "titulo": "Tipos de unidades", "href": urlAplicacion + "pages/Unidad.aspx", "clase": ""};
+        var HijoAux2 = { "titulo": "Representantes de entidades ROPO", "href": urlAplicacion + "pages/RepreROPO.aspx", "clase": ""};
+        var HijoAux3 = { "titulo": "Entidades de baja con usuarios activos", "href": urlAplicacion + "pages/Huerfanos.aspx", "clase": ""};
         MenuAux.hijos.push(HijoAux1, HijoAux2, HijoAux3);
         _menu.push(MenuTransaccion, MenuCSV, MenuAux);
         return _menu;
