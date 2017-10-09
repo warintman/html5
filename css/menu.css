@@ -81,25 +81,25 @@ header nav {
 }
 
 .icon_home{
-    background:transparent url(home.png) no-repeat center left;
+    background:transparent url(../img/home.png) no-repeat center left;
 }
 .icon_logout{
-    background:transparent url(logout.png) no-repeat center left;
+    background:transparent url(../img/logout.png) no-repeat center left;
 }
 .icon_user{
-    background:transparent url(user.png) no-repeat center left;
+    background:transparent url(../img/user.png) no-repeat center left;
 }
 .icon_admin{
-    background:transparent url(userAdmin.png) no-repeat center left;
+    background:transparent url(../img/userAdmin.png) no-repeat center left;
 }
 .icon_tablasAux{
-    background:transparent url(tablasAux.png) no-repeat center left;
+    background:transparent url(../img/tablasAux.png) no-repeat center left;
 }
 .icon_carga{
-    background:transparent url(cargaDatos.png) no-repeat center left;
+    background:transparent url(../img/cargaDatos.png) no-repeat center left;
 }
 .icon_transaccion {
-	background:transparent url(transaccion.png) no-repeat center left;
+	background:transparent url(../img/transaccion.png) no-repeat center left;
 }
 .item_content{     
     width:250px; /*igual q item hover menos el margen izquierdo del icono*/

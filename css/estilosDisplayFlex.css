@@ -64,7 +64,7 @@ p{margin:5px 0px 5px 0px}
 
 .Pie{padding:5px;text-align:center;}
 .Pie span.P{
-	background:transparent url(./escudo.png) no-repeat center left; 
+	background:transparent url(../img/escudo.png) no-repeat center left; 
 	padding:5px 0px 5px 20px;
 }
 .Pie{border-top:solid 1px #DBDCE3;}

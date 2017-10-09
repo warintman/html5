@@ -53,7 +53,7 @@
 .G5 a.link{ text-decoration:none; margin: 0 .5em 0 0; }
 .G5-buttons { bottom: .2em; left: .2em; right: .2em; padding:.5em; border-top:solid 1px silver; text-align:right; }
 .G5-image { top: .42em; bottom: .42em; left: .42em; right: .42em; }
-.G5-image { width: 50px; height: 50px; background: transparent url(Dlg_S_Sheet.png) no-repeat; }    
+.G5-image { width: 50px; height: 50px; background: transparent url(../img/Dlg_S_Sheet.png) no-repeat; }    
 
 .i_doc_info { background-position: 0 -48px }
 .i_tables   { background-position: 6px -238px; }

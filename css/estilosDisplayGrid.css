@@ -90,18 +90,18 @@ article {
 p{margin:5px 0px 5px 0px}
 
 .Pie{padding:5px;text-align:center;}
-.Pie span.P{background:white url(./escudo.png) no-repeat center left; padding:5px 0px 5px 20px;}
+.Pie span.P{background:white url(../img/escudo.png) no-repeat center left; padding:5px 0px 5px 20px;}
 .Pie{border:solid 1px #DBDCE3;}
 
 .HeaderContainer{width:100%;padding:0px;}
-.HeaderContainer{background:transparent url(./logoR.png) repeat-y right 0px;}
+.HeaderContainer{background:transparent url(../img/logoR.png) repeat-y right 0px;}
 .HeaderContainer{border-bottom:solid 2px #DBDCE3}
 
-.HeaderContainer .Titulo{background:transparent url(./logomarm.png) no-repeat;width:100%;font-variant:small-caps;font-weight:bold;font-size:3em;text-align: center;}
+.HeaderContainer .Titulo{background:transparent url(../img/logomarm.png) no-repeat;width:100%;font-variant:small-caps;font-weight:bold;font-size:3em;text-align: center;}
 .HeaderContainer .subTitulo{font-size: 50%;}
 
 .ToolBar{color:black;width:100%;}
-.ToolBar{background:white url(./HeaderBG.jpg) repeat-y right 0px;}
+.ToolBar{background:white url(../img/HeaderBG.jpg) repeat-y right 0px;}
 .ToolBar{border-bottom:solid 1px #DBDCE3}
 .ToolBar{margin-top:0px;}
  
