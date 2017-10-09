@@ -1,5 +1,6 @@
 (function(){
-    var _logout = '/default.aspx?action=logout';
+    //todo esto se debe cargar después de cargar los menus
+    
     //barra de navegacion (perfil + usuario)
     document.getElementById('UserTool').addEventListener("mouseover",function mouseoverut(){document.getElementById('ToolBar').style.display='block';});
     document.getElementById('UserTool').addEventListener("mouseout",function mouseoverut(){document.getElementById('ToolBar').style.display='none';});

@@ -1,12 +1,21 @@
 (function(){
     //titulos y perfil
-    document.title = "RETO";
-    document.getElementById('titulo').innerText = 'RETO';
-    document.getElementById('subtitulo').innerText = 'Registro Electrónico de Transacciones y Operaciones';
-    document.getElementById('footerTexto').innerText = 'Ministerio de Agricultura y Pesca, Alimentación y Medio Ambiente';
-    document.getElementById('perfil').innerText = 'Perfil: Administrador';
-    document.getElementById('usuario').innerText = 'Usuario: 11111111H Admin Admini Admino';    
+    var tituloPagina = "RETO";
+    var proyecto = "RETO";
+    var descripcionProyecto = "Registro Electrónico de Transacciones y Operaciones";
+    var pie = "Ministerio de Agricultura y Pesca, Alimentación y Medio Ambiente";
+    var perfil = "Perfil: Administrador";
+    var usuario = "Usuario: 11111111H Admin Admini Admino";
     var estadisticasHREF = window.location.origin + '/cuadrodemando/?apli=' + 'RETO';
+    var _logout = '/default.aspx?action=logout';
+
+    document.title = tituloPagina;
+    document.getElementById('titulo').innerText = proyecto;
+    document.getElementById('subtitulo').innerText = descripcionProyecto;
+    document.getElementById('footerTexto').innerText = pie;
+    document.getElementById('perfil').innerText = perfil;
+    document.getElementById('usuario').innerText = usuario;    
+    
     var urlAplicacion = window.location.origin + '/' + window.location.pathname.split("/")[1] + '/';
     //menus
     var _Menus = [];
@@ -20,7 +29,6 @@
         //Hijos { "titulo": "", "href": "", "clase": ""};
         var HijoInicio = { "titulo": "Inicio", "href": urlAplicacion + "default.html", "clase": ""};
         var HijoDocumentacion = { "titulo": "Documentación", "href": urlAplicacion + "pages/Documentacion.aspx", "clase": ""};
-
         MenuInicio.hijos.push(HijoInicio, HijoDocumentacion);
         return MenuInicio;
     }
