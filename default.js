@@ -45,7 +45,11 @@
     for (i = 0; i < itemsMenu.length; i++) {        
         itemsMenu[i].addEventListener("mouseover",function mouseovermenuitem(){  
             //si mide mas pixels que recogido-> return     
-            if (this.offsetWidth!==52) return;    
+            if (this.offsetWidth!==52) {
+                //miro si tiene el icono en el centro
+                if (this.classList.contains('itemAlto') && !this.children[0].classList.contains('iconAlto')) this.children[0].classList.add('iconAlto');
+                return;
+            }    
             var _elem = this.children[0];    
             _elem.classList.add('rollable');
             if (this.classList.contains('itemAlto')) _elem.classList.add('iconAlto');        
