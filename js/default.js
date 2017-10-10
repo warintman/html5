@@ -45,6 +45,7 @@
     var i;
     for (i = 0; i < itemsMenu.length; i++) {        
         itemsMenu[i].addEventListener("mouseover",function mouseovermenuitem(){  
+            this.children[1].style.display = 'table';
             //si mide mas pixels que recogido-> return     
             if (this.offsetWidth!==52) {
                 //miro si tiene el icono en el centro
@@ -61,6 +62,7 @@
             });
         });
         itemsMenu[i].addEventListener("mouseleave",function mouseoutmenuitem(){
+            this.children[1].style.display = 'none';
             var _elem = this.children[0];
             _elem.classList.add('unrollable');        
             if (_elem.classList.contains('iconAlto')) _elem.classList.remove('iconAlto');
