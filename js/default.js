@@ -1,24 +1,24 @@
 (function(){
     //todo esto se debe cargar después de cargar los menus
     
-    //barra de navegacion (perfil + usuario)
-    document.getElementById('UserTool').addEventListener("mouseover",function mouseoverut(){
-        if (document.getElementById('ToolBar').style.display==='block') return;
-        if (document.getElementById('ToolBar').classList.contains('fadeOutUp')) document.getElementById('ToolBar').classList.remove('fadeOutUp');
-        document.getElementById('ToolBar').style.display='block';
-        document.getElementById('ToolBar').classList.add('fadeInDown');                
-        document.getElementById('ToolBar').onCSSAnimationEnd(function(){
-            document.getElementById('ToolBar').classList.remove('fadeInDown');
+    //barra de navegacion (perfil + usuario)    
+    document.getElementById('UserTool').addEventListener("mouseover", function mouseoverut() {
+        if (document.getElementById('ToolBar').style.display === 'block') return;
+        //if (document.getElementById('ToolBar').classList.contains('fadeOutUp')) document.getElementById('ToolBar').classList.remove('fadeOutUp');
+        document.getElementById('ToolBar').style.display = 'block';
+        document.getElementById('ToolBar').classList.add('fadeInDown');
+        document.getElementById('ToolBar').onCSSAnimationEnd(function () {
+          document.getElementById('ToolBar').classList.remove('fadeInDown');
         });
-    });
-    document.getElementById('UserTool').addEventListener("mouseleave",function mouseoouut(){
-        if (document.getElementById('ToolBar').style.display==='none' || document.getElementById('UserTool').offsetWidth===52) return;
-        document.getElementById('ToolBar').classList.add('fadeOutUp');                     
-        document.getElementById('ToolBar').onCSSAnimationEnd(function(){
-            document.getElementById('ToolBar').classList.remove('fadeOutUp');
-            document.getElementById('ToolBar').style.display='none';
-        });
-    });
+      });
+      document.getElementById('UserTool').addEventListener("mouseleave", function mouseoouut() {
+      //  if (document.getElementById('ToolBar').style.display === 'none' || document.getElementById('UserTool').offsetWidth === 52) return;
+      //  document.getElementById('ToolBar').classList.add('fadeOutUp');
+      //  document.getElementById('ToolBar').onCSSAnimationEnd(function () {
+      //    document.getElementById('ToolBar').classList.remove('fadeOutUp');
+          document.getElementById('ToolBar').style.display = 'none';
+      //  });
+      });
     //salida de la aplicacion
     document.getElementById('CloseSesionTool').children[1].children[0].addEventListener("click",function logout(){location.href = window.location.origin + '/' + window.location.pathname.split("/")[1] + _logout;});
     //el menu
