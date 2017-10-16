@@ -271,7 +271,7 @@ header nav {
         padding-top: 10px;
     }        
     .menuHidden {        
-        margin-top: -200%;        
+        margin-top: -500px;        
         transition: all ease-in-out 1000ms;
     }
     .menuVisible {
