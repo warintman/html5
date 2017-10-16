@@ -271,12 +271,14 @@ header nav {
         padding-top: 10px;
     }        
     .menuHidden {        
-        margin-top: -500px;        
+        margin-top: -500px;     
+        margin-left: -500px;   
         transition: all ease-in-out 1000ms;
     }
     .menuVisible {
         display: flex;
-        margin-top: 0px;        
+        margin-top: 0px; 
+        margin-left: 0px;       
         transition: all ease-in-out 1000ms;
     }
     .VacioRight {display: none;}
