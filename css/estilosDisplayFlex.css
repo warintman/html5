@@ -35,8 +35,6 @@ html {
     flex-basis: 100%;
   }
   
-  body nav {display: none;}
-
   .ToolBar {
     display: flex;
     flex-direction: row;
@@ -117,3 +115,13 @@ p{margin:5px 0px 5px 0px}
 .ToolBar div{margin:2px;display:block;white-space:nowrap;}
 .ToolBar div{color:inherit;cursor:inherit;padding:3px 1px 3px 4px;}
 .ToolBar div.icon{padding-left:20px;background:transparent url() no-repeat 0.1em center;}
+
+.ToolBarHidden {
+  margin-top: -100%;  
+  transition: all ease-in-out 500ms;
+}
+.ToolBarVisible {
+  display: flex;
+  margin-top: 0px;
+  transition: all ease-in-out 500ms;
+}

@@ -262,24 +262,56 @@ header nav {
         margin: 5px 0px 1em 4em;
     }
     .iconoMenu {
+        z-index: 999;
         display:inline-flex;
-    }    
-    #menuOpen {
-        display:block;
         cursor: pointer;
+        margin-left: 5px;
+        height: 1em;
+        width: 1em;
+        padding-top: 10px;
+    }        
+    .menuHidden {        
+        margin-top: -100%;        
+        transition: all ease-in-out 1000ms;
     }
-    #menuClose {
-        display:none;
-        cursor: pointer;
-        -webkit-border-radius: 90px;
-        -moz-border-radius: 90px;
-        border-radius: 90px;
-        border: 1px solid #60C442;
-
-    }    
-    .menuHidden {display: none;}
-    .menuVisible {display: flex;}
+    .menuVisible {
+        display: flex;
+        margin-top: 0px;        
+        transition: all ease-in-out 1000ms;
+    }
     .VacioRight {display: none;}
+}
+
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+  content: '';
+  display: block;
+  background: #60C442;
+  height: 3px;
+  width: 24px;
+  border-radius: 3px;
+  transition: all ease-in-out 500ms;
+}
+
+.hamburger::before {
+  transform: translateY(-6px);
+}
+
+.hamburger::after {
+  transform: translateY(3px);
+}
+
+.open .hamburger {
+  transform: rotate(45deg);
+}
+
+.open .hamburger::before {
+  opacity: 0;
+}
+
+.open .hamburger::after {
+  transform: translateY(-3px) rotate(-90deg);
 }
 
 @media screen and (max-width: 435px) {

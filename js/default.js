@@ -3,39 +3,37 @@
     
     //barra de navegacion (perfil + usuario)    
     document.getElementById('UserTool').addEventListener("mouseover", function mouseoverut() {
-        if (document.getElementById('ToolBar').style.display === 'block') return;
-        //if (document.getElementById('ToolBar').classList.contains('fadeOutUp')) document.getElementById('ToolBar').classList.remove('fadeOutUp');
-        document.getElementById('ToolBar').style.display = 'block';
-        document.getElementById('ToolBar').classList.add('fadeInDown');
-        document.getElementById('ToolBar').onCSSAnimationEnd(function () {
-          document.getElementById('ToolBar').classList.remove('fadeInDown');
-        });
+        document.getElementById('ToolBar').children[0].classList.remove('ToolBarHidden');
+        document.getElementById('ToolBar').children[0].classList.add('ToolBarVisible');
       });
       document.getElementById('UserTool').addEventListener("mouseleave", function mouseoouut() {
-      //  if (document.getElementById('ToolBar').style.display === 'none' || document.getElementById('UserTool').offsetWidth === 52) return;
-      //  document.getElementById('ToolBar').classList.add('fadeOutUp');
-      //  document.getElementById('ToolBar').onCSSAnimationEnd(function () {
-      //    document.getElementById('ToolBar').classList.remove('fadeOutUp');
-          document.getElementById('ToolBar').style.display = 'none';
-      //  });
+        document.getElementById('ToolBar').children[0].classList.remove('ToolBarVisible');
+        document.getElementById('ToolBar').children[0].classList.add('ToolBarHidden');
       });
     //salida de la aplicacion
     document.getElementById('CloseSesionTool').children[1].children[0].addEventListener("click",function logout(){location.href = window.location.origin + '/' + window.location.pathname.split("/")[1] + _logout;});
     //el menu
-    document.getElementById('menuOpen').addEventListener("click",function openMenu(){        
-        document.getElementById('menuOpen').style.display='none';
-        document.getElementById('menuClose').style.display='block';
-        document.getElementById('menu').classList.remove('menuHidden');        
-        document.getElementById('menu').classList.add('menuVisible');        
-    });
-    document.getElementById('menuClose').addEventListener("click",closeMenu);    
     function closeMenu(){        
-        document.getElementById('menuOpen').style.display='block';
-        document.getElementById('menuClose').style.display='none';
+        if (!document.getElementById('iconoMenu').classList.contains('open')) return;
+        document.getElementById('menuHamburger').classList.toggle('site-nav--open');
+        document.getElementById('iconoMenu').classList.toggle('open');
         document.getElementById('menu').classList.remove('menuVisible');
         document.getElementById('menu').classList.add('menuHidden');
         EliminaRotacionMenu();
     }
+    document.getElementById('iconoMenu').addEventListener("click",function openMenu(){ 
+        document.getElementById('menuHamburger').classList.toggle('site-nav--open');
+        document.getElementById('iconoMenu').classList.toggle('open');
+        if (document.getElementById('iconoMenu').classList.contains('open')) {
+            document.getElementById('menu').classList.remove('menuHidden');        
+            document.getElementById('menu').classList.add('menuVisible');
+        }
+        else {
+            document.getElementById('menu').classList.remove('menuVisible');
+            document.getElementById('menu').classList.add('menuHidden');
+            EliminaRotacionMenu();
+        }
+    });
 
     var handleMediaChange = function (mql) {
 

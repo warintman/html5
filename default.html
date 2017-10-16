@@ -16,7 +16,6 @@
 <link rel="stylesheet" href="css/estilosDisplayFlex.css" />
 <link rel="stylesheet" href="css/maincontainerDefault.css" />
 <link rel="stylesheet" href="css/menu.css" />
-<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
 </head>
  
 <body>    
@@ -24,13 +23,8 @@
         <div class="HeaderContainer">                                
             <div class="VacioRight"></div>
             <div class="Titulo">
-                <div class="iconoMenu" id="iconoMenu">
-                    <!-- para ver los iconos ir a 
-                        https://github.com/google/material-design-icons/blob/master/iconfont/codepoints
-                        https://www.w3schools.com/icons/tryit.asp?filename=tryicons_google-intro-size
-                     -->
-                    <i class="material-icons iconMaterial" id="menuOpen">menu</i>
-                    <i class="material-icons iconMaterial" id="menuClose">close</i>
+                <div class="iconoMenu" id="iconoMenu">                    
+                    <div class="hamburger" id="menuHamburger"></div>
                 </div>
                 <div id="titulo"></div><div id="subtitulo" class="subTitulo zoomIn"></div>                
             </div>            
@@ -39,7 +33,7 @@
         </div>                 
     </header>
     <nav id="ToolBar">
-        <div class="ToolBar">
+        <div class="ToolBar ToolBarHidden">
             <div class="Perfil" id="perfil"></div>
             <div class="Usuario" id="usuario"></div>
         </div>
