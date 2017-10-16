@@ -117,7 +117,7 @@ p{margin:5px 0px 5px 0px}
 .ToolBar div.icon{padding-left:20px;background:transparent url() no-repeat 0.1em center;}
 
 .ToolBarHidden {
-  margin-top: -200%;  
+  margin-top: -100%;  
   transition: all ease-in-out 500ms;
 }
 .ToolBarVisible {
