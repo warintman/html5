@@ -316,6 +316,10 @@ header nav {
   transform: translateY(-3px) rotate(-90deg);
 }
 
+@media screen and (max-width: 360px) {
+    .VacioRight {display: none;}
+}
+
 @media screen and (max-width: 435px) {
     .ToolBar {
         flex-direction: column;

@@ -2,13 +2,13 @@
     display: block;
     overflow: auto;
     overflow-x: hidden;
-    padding: 0.5em 0 .25em 0.5em;
 }
 
 .flexContainer {    
     display: flex;
     flex-wrap: wrap;    
-    flex-direction: column;        
+    flex-direction: column; 
+    padding: 0.5em 0 .25em 0.5em;       
 }
 
 .tituloTarea {

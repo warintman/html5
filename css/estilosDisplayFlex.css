@@ -107,14 +107,8 @@ p{margin:5px 0px 5px 0px}
 .ToolBar{border-bottom:solid 1px #DBDCE3}
 .ToolBar{margin-top:0px;}
  
-.ToolBar a{text-decoration:none;white-space:nowrap;cursor:pointer;padding:3px 1px 3px 4px}
-.ToolBar a{margin:2px;float:Left;}
-.ToolBar a.icon{color:inherit;padding-left:20px;}
-.ToolBar a:hover{color:blue;}
-
 .ToolBar div{margin:2px;display:block;white-space:nowrap;}
 .ToolBar div{color:inherit;cursor:inherit;padding:3px 1px 3px 4px;}
-.ToolBar div.icon{padding-left:20px;background:transparent url() no-repeat 0.1em center;}
 
 .ToolBarHidden {
   margin-top: -100%;
@@ -127,3 +121,23 @@ p{margin:5px 0px 5px 0px}
   margin-left: 0px;
   transition: all ease-in-out 500ms;
 }
+
+/* usado para toolbar con iconos*/
+.ToolBar a{text-decoration:none;white-space:nowrap;cursor:pointer;padding:3px 1px 3px 4px}
+.ToolBar a{margin:2px;}
+.ToolBar a.icon{color:inherit;padding-left:20px;}
+.ToolBar a:hover{color:blue;}
+.ToolBar a.iconDeactive{opacity: 0.2; cursor: default;}
+.ToolBar div.icon{padding-left:20px;background:transparent url() no-repeat 0.1em center;}
+.ToolbarContainer {	top: 0em;bottom: 0em;	left: 0em;	right: 0px;	overflow: hidden;	z-index: 2;}
+.i_tb_delete{ background: transparent url(../img/SpriteSheet2.png) no-repeat; background-position: -94px -156px;}
+.i_tb_edit{ background: transparent url(../img/SpriteSheet2.png) no-repeat; background-position: -269px -52px;}
+.i_tb_new{ background: transparent url(../img/SpriteSheet2.png) no-repeat; background-position: -269px -28px;}
+.i_tb_search{ background: transparent url(../img/SpriteSheet2.png) no-repeat; background-position: -2px -24px;}
+.i_tb_cancel{ background: transparent url(../img/SpriteSheet2.png) no-repeat; background-position: -2px -76px;}
+.i_tb_config{ background: transparent url(../img/SpriteSheet2.png) no-repeat; background-position: -2px -182px;}
+.i_tb_export{ background: transparent url(../img/SpriteSheet2.png) no-repeat; background-position: -2px -155px;}
+.i_tb_send{ background: transparent url(../img/SpriteSheet2.png) no-repeat; background-position: -94px -1px;}
+.i_tb_save{ background: transparent url(../img/SpriteSheet2.png) no-repeat; background-position: -187px -24px;}
+.i_tb_table{ background: transparent url(../img/SpriteSheet2.png) no-repeat; background-position: -187px -105px;}
+.i_tb_back{ background: transparent url(../img/SpriteSheet2.png) no-repeat; background-position: 1px -481px;}
