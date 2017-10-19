@@ -235,52 +235,69 @@ header nav {
 
 @media screen and (max-width: 1165px) {
     .HeaderContainer  {
-        flex-direction: column;
+            min-height: 10.5em;
+            flex-direction: column;
+    }
+.HeaderContainerIE {				
+            min-height: 10.5em;
     }
     .VacioRight {display: none;}
-    *::-ms-backdrop, .HeaderContainer {  
-        min-height: 12em; /* IE 11 */
-    }
 }
 
 @media screen and (max-width: 660px) {
     .HeaderContainer {
-        flex-direction: row;        
-    }
-    *::-ms-backdrop, .HeaderContainer {  
-        min-height: 7.5em; /* IE 11 */
+            flex-direction: row;    
+            min-height: 0em;
     }
     .HeaderContainer .menu {
-        width: 100%;
-        flex-direction: column;
-        flex-wrap: wrap;
-        justify-content: flex-start;
-        align-content: flex-start;
-        align-items: stretch;        
+            width: 100%;
+            flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            align-content: flex-start;
+            align-items: stretch;        
     }
     .item_content p{
-        margin: 5px 0px 1em 4em;
+            margin: 5px 0px 1em 4em;
     }
     .iconoMenu {
-        z-index: 999;
-        display:inline-flex;
-        cursor: pointer;
-        margin-left: 5px;
-        height: 1em;
-        width: 1em;
-        padding-top: 10px;
-    }        
+            z-index: 999;
+            display:inline-flex;
+            cursor: pointer;
+            margin-left: 5px;
+            height: 1em;
+            width: 1em;
+            padding-top: 10px;
+    }
     .menuHidden {        
-        margin-top: -200%;     
-        margin-left: -100%;           
+            margin-top: -100em;        
+            margin-left: 0em;				
     }
     .menuVisible {
-        display: flex;
-        margin-top: 0px; 
-        margin-left: 0px;               
+            display: flex;
+            margin-top: 0px;   
+            margin-left: 0px;     				
+    }
+    .menuHiddenIE {        
+            display: none;				
+    }
+    .menuVisibleIE {
+            display: flex;				     				
+    }
+    .HeaderContainerIE {				
+            min-height: 43em;
     }
     .VacioRight {display: none;}
     .menuTransition {transition: all ease-in-out 1000ms;}
+}
+
+@media screen and (max-width: 435px) {
+    .ToolBar {
+            flex-direction: column;
+    }
+    .Perfil {
+            margin: 3px !important;
+    }
 }
 
 .hamburger,

@@ -76,11 +76,7 @@ p{margin:5px 0px 5px 0px}
   flex-wrap: wrap;
 }
 
-*::-ms-backdrop, .HeaderContainer{  
-  margin: 10px 5px 0px 5px; /* IE 11 */
-}
-
-.HeaderContainer{min-height: 7.5em; padding:0px;}
+.HeaderContainer{padding:0px;}
 
 .HeaderContainer .Titulo{
 	font-weight:bold;
@@ -120,6 +116,12 @@ p{margin:5px 0px 5px 0px}
   margin-top: 0px;
   margin-left: 0px;
   transition: all ease-in-out 500ms;
+}
+
+@media all and (-ms-high-contrast:none)
+{
+*::-ms-backdrop, #ToolBar .ToolBarHidden { margin-top: -20px; } /* IE11 */
+*::-ms-backdrop, #ToolBar .ToolBarVisible { margin-top: 0px; } /* IE11 */
 }
 
 /* usado para toolbar con iconos*/
