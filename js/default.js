@@ -14,6 +14,7 @@
     document.getElementById('CloseSesionTool').children[1].children[0].addEventListener("click",function logout(){location.href = window.location.origin + '/' + window.location.pathname.split("/")[1] + _logout;});
     //el menu
     function closeMenu(){        
+        if (document.getElementById('menu').classList.contains('menuTransition')) document.getElementById('menu').classList.remove('menuTransition');
         if (!document.getElementById('iconoMenu').classList.contains('open')) return;
         document.getElementById('menuHamburger').classList.toggle('site-nav--open');
         document.getElementById('iconoMenu').classList.toggle('open');
@@ -24,6 +25,7 @@
     document.getElementById('iconoMenu').addEventListener("click",function openMenu(){ 
         document.getElementById('menuHamburger').classList.toggle('site-nav--open');
         document.getElementById('iconoMenu').classList.toggle('open');
+        if (!document.getElementById('menu').classList.contains('menuTransition')) document.getElementById('menu').classList.add('menuTransition');
         if (document.getElementById('iconoMenu').classList.contains('open')) {
             document.getElementById('menu').classList.remove('menuHidden');        
             document.getElementById('menu').classList.add('menuVisible');
@@ -43,8 +45,8 @@
         //console.log();        
         if (mql.matches) EliminaRotacionMenu();
         if (mql.matches && (mql.media==='screen and (max-width: 660px)' || mql.media==='screen and (max-width:660px)')) {
-            //si estaba abierto el menu, lo cierro
-            closeMenu();
+            //si estaba abierto el menu, lo cierro            
+            closeMenu();            
         }        
     };
 
