@@ -271,7 +271,7 @@ header nav {
         padding-top: 10px;
     }        
     .menuHidden {        
-        margin-top: -100%;     
+        margin-top: -200%;     
         margin-left: -100%;   
         transition: all ease-in-out 1000ms;
     }
@@ -328,3 +328,12 @@ header nav {
         margin: 3px !important;
     }
 }
+
+@media screen and (max-width: 338px) {
+    #titulo {
+        width: auto;
+    }
+    .HeaderContainer .Titulo {
+        justify-content: center;
+    }
+  }
