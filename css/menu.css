@@ -270,20 +270,12 @@ header nav {
             padding-top: 10px;
     }
     .menuHidden {        
-            margin-top: -100em;        
-            margin-left: 0em;				
+            margin-top: -100em;                    				
     }
     .menuVisible {
             display: flex;
-            margin-top: 0px;   
-            margin-left: 0px;     				
-    }
-    .menuHiddenIE {        
-            display: none;				
-    }
-    .menuVisibleIE {
-            display: flex;				     				
-    }
+            margin-top: 0px;                  				
+    }    
     .HeaderContainerIE {				
             min-height: 43em;
     }

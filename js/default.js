@@ -52,51 +52,29 @@
     //salida de la aplicacion
     document.getElementById('CloseSesionTool').children[1].children[0].addEventListener("click",function logout(){location.href = window.location.origin + '/' + window.location.pathname.split("/")[1] + _logout;});
     //el menu
-    if (IEVersion != -1) {
-        document.getElementById('menu').classList.remove('menuHidden');
-        document.getElementById('menu').classList.add('menuHiddenIE');
-    }
     function closeMenu() {
-        if (document.getElementById('menu').classList.contains('menuTransition') && IEVersion==-1) document.getElementById('menu').classList.remove('menuTransition');
+        if (document.getElementById('menu').classList.contains('menuTransition')) document.getElementById('menu').classList.remove('menuTransition');
         if (!document.getElementById('iconoMenu').classList.contains('open')) return;
         document.getElementById('menuHamburger').classList.toggle('site-nav--open');
         document.getElementById('iconoMenu').classList.toggle('open');
-        if (IEVersion != -1) {
-            document.getElementById('menu').classList.remove('menuVisibleIE');
-            document.getElementById('menu').classList.add('menuHiddenIE');
-            document.getElementById('HeaderContainer').classList.remove('HeaderContainerIE');
-        }
-        else {
-            document.getElementById('menu').classList.remove('menuVisible');
-            document.getElementById('menu').classList.add('menuHidden');
-        }			
+        if (IEVersion !== -1) document.getElementById('HeaderContainer').classList.remove('HeaderContainerIE');
+        document.getElementById('menu').classList.remove('menuVisible');
+        document.getElementById('menu').classList.add('menuHidden');		
         EliminaRotacionMenu();
     }
     document.getElementById('iconoMenu').addEventListener("click", function openMenu() {
         document.getElementById('menuHamburger').classList.toggle('site-nav--open');
         document.getElementById('iconoMenu').classList.toggle('open');
-        if (!document.getElementById('menu').classList.contains('menuTransition') && IEVersion == -1) document.getElementById('menu').classList.add('menuTransition');
+        if (!document.getElementById('menu').classList.contains('menuTransition')) document.getElementById('menu').classList.add('menuTransition');
         if (document.getElementById('iconoMenu').classList.contains('open')) {
-          if (IEVersion != -1) {
-                document.getElementById('menu').classList.remove('menuHiddenIE');
-                document.getElementById('menu').classList.add('menuVisibleIE');
-                document.getElementById('HeaderContainer').classList.add('HeaderContainerIE');
-            }
-            else {
-                document.getElementById('menu').classList.remove('menuHidden');
-                document.getElementById('menu').classList.add('menuVisible');
-            }				
+            if (IEVersion !== -1) document.getElementById('HeaderContainer').classList.add('HeaderContainerIE');            
+            document.getElementById('menu').classList.remove('menuHidden');
+            document.getElementById('menu').classList.add('menuVisible');            				
         }
         else {
-          if (IEVersion != -1) {
-                document.getElementById('menu').classList.remove('menuVisibleIE');
-                document.getElementById('menu').classList.add('menuHiddenIE');
-                document.getElementById('HeaderContainer').classList.remove('HeaderContainerIE');
-            }
-            else {
-                document.getElementById('menu').classList.remove('menuVisible');
-                document.getElementById('menu').classList.add('menuHidden');
-            }				
+            if (IEVersion !== -1) document.getElementById('HeaderContainer').classList.remove('HeaderContainerIE');            
+            document.getElementById('menu').classList.remove('menuVisible');
+            document.getElementById('menu').classList.add('menuHidden');            				
             EliminaRotacionMenu();
         }
     });
