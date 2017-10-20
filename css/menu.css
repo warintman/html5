@@ -32,9 +32,9 @@ header nav {
 .item{	           
     background-color:#f0f0f0;
 	opacity: 0.9;    
-    width:32px;
+    width:24px;
     margin:0px 5px;
-    height:32px;
+    height:24px;
     border:2px solid #ddd;
     -moz-border-radius:30px;
     -webkit-border-radius:30px;
@@ -67,6 +67,7 @@ header nav {
     position:absolute;
     width:24px;
     height:24px;
+    margin: -2px 0px 0px -2px;
 }
 
 .iconAlto {
