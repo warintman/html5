@@ -99,12 +99,13 @@
     //icono del menu rodante, el bucle forEach no va en IE ni EDGE
     //https://stackoverflow.com/questions/27065659/why-does-foreach-not-work-in-an-iframe-in-ie11
     var itemsMenu = document.querySelectorAll('.item');
-    var i;
+    var i;    
     for (i = 0; i < itemsMenu.length; i++) {        
-        itemsMenu[i].addEventListener("mouseover",function mouseovermenuitem(){  
+        itemsMenu[i].addEventListener("mouseover",function mouseovermenuitem(){
+            var tamanoRecogido = this.children[0].width;
             this.children[1].style.display = 'table';
             //si mide mas pixels que recogido-> return     
-            if (this.offsetWidth!==52) {
+            if (this.offsetWidth!==tamanoRecogido) {
                 //miro si tiene el icono en el centro
                 if (this.classList.contains('itemAlto') && !this.children[0].classList.contains('iconAlto')) this.children[0].classList.add('iconAlto');
                 return;

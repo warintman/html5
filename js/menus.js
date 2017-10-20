@@ -80,7 +80,7 @@
             var divMenuItem = document.createElement('div');
             divMenuItem.className = 'item ' + Menus[i].claseMenuItem || '';
             if (Menus[i].id && Menus[i].id.length>0) divMenuItem.id = Menus[i].id || '';
-            var icono = document.createElement('a');
+            var icono = document.createElement('img');
             icono.className = 'linkIcon ' + Menus[i].claseIcono || '';
             var divItemcontent = document.createElement('div');
             divItemcontent.className='item_content';

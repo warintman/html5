@@ -66,17 +66,14 @@ header nav {
 }
 
 .linkIcon{
-    position:absolute;
-    /*width:24px;
-    height:24px;
-    margin: -2px 0px 0px -2px;*/
+    position:absolute;    
     width:48px;
     height:48px;   
     margin: -2px; 
 }
 
-.iconAlto {
-    height: 90px; /* alto del item hover menos el margen*/
+.iconAlto {    
+    margin-top: 20px; /*modificar para cambio de icono*/
 }
 
 .tituloAlto {
@@ -86,26 +83,26 @@ header nav {
     /*padding-top: 10px;*/
 }
 
-.icon_home{
-    background:transparent url(../img/home.png) no-repeat center left;
+.icon_home{    
+    content: url(../img/home.png);
 }
-.icon_logout{
-    background:transparent url(../img/logout.png) no-repeat center left;
+.icon_logout{    
+    content: url(../img/logout.png);
 }
-.icon_user{
-    background:transparent url(../img/user.png) no-repeat center left;
+.icon_user{    
+    content: url(../img/user.png);
 }
-.icon_admin{
-    background:transparent url(../img/userAdmin.png) no-repeat center left;
+.icon_admin{    
+    content: url(../img/userAdmin.png);
 }
-.icon_tablasAux{
-    background:transparent url(../img/tablasAux.png) no-repeat center left;
+.icon_tablasAux{    
+    content: url(../img/tablasAux.png);
 }
-.icon_carga{
-    background:transparent url(../img/cargaDatos.png) no-repeat center left;
+.icon_carga{    
+    content: url(../img/cargaDatos.png);
 }
 .icon_transaccion {
-	background:transparent url(../img/transaccion.png) no-repeat center left;
+    content: url(../img/transaccion.png);
 }
 .item_content{     
     width:250px; /*igual q item hover menos el margen izquierdo del icono*/
@@ -287,6 +284,27 @@ header nav {
     }
     .VacioRight {display: none;}
     .menuTransition {transition: all ease-in-out 1000ms;}
+
+    .item {
+        width:24px;
+        height:24px;
+        margin: 2px 5px;
+    }
+    .linkIcon {
+        width:24px;
+        height:24px;
+        margin: -2px 0px 0px -2px;
+    }
+    .iconAlto {
+        margin-top: 30px;
+    }
+    .cajaClose {
+        height: 20px;
+    }
+    #UserTool .tituloAlto {
+        height: 20px;
+    }
+
 }
 
 @media screen and (max-width: 435px) {
