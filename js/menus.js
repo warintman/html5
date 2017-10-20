@@ -25,7 +25,7 @@
 
     function GenerateInicio() {
         //Padre { "tituloPadre": "", "id": "", "claseIcono": "", "claseTitulo": "", "claseMenuItem": "", "hijos": []};
-        var MenuInicio = { "titulo": "Inicio", "id": "", "claseIcono": "icon_home", "claseTitulo": "", "claseMenuItem": "itemAlto", "hijos": []};
+        var MenuInicio = { "titulo": "Inicio", "id": "", "claseIcono": "home.png", "claseTitulo": "", "claseMenuItem": "itemAlto", "hijos": []};
         //Hijos { "titulo": "", "href": "", "clase": ""};
         var HijoInicio = { "titulo": "Inicio", "href": urlAplicacion + "default.html", "clase": ""};
         var HijoDocumentacion = { "titulo": "Documentación", "href": urlAplicacion + "pages/Documentacion.aspx", "clase": ""};
@@ -34,12 +34,12 @@
     }
 
     function GeneratePerfilClose() {
-        var MenuAdministracion = { "titulo": "Administración", "id": "", "claseIcono": "icon_admin", "claseTitulo": "", "claseMenuItem": "itemAlto", "hijos": []};
+        var MenuAdministracion = { "titulo": "Administración", "id": "", "claseIcono": "userAdmin.png", "claseTitulo": "", "claseMenuItem": "itemAlto", "hijos": []};
         var HijoUsuarios = { "titulo": "Usuarios", "href": urlAplicacion + "Regeus.UAdmin.aspx", "clase": ""};
         var HijoEstadisticas = { "titulo": "Estadísticas de acceso", "href": estadisticasHREF, "clase": ""};
         MenuAdministracion.hijos.push(HijoUsuarios, HijoEstadisticas);
-        var MenuPerfil = { "titulo": "Perfil de Usuario", "id": "UserTool", "claseIcono": "icon_user", "claseTitulo": "tituloAlto", "claseMenuItem": "", "hijos": []};
-        var MenuClose = { "titulo": "Cerrar Sesión", "id": "CloseSesionTool", "claseIcono": "icon_logout", "claseTitulo": "pulse cajaClose tituloAlto", "claseMenuItem": "", "hijos": []};
+        var MenuPerfil = { "titulo": "Perfil de Usuario", "id": "UserTool", "claseIcono": "user.png", "claseTitulo": "tituloAlto", "claseMenuItem": "", "hijos": []};
+        var MenuClose = { "titulo": "Cerrar Sesión", "id": "CloseSesionTool", "claseIcono": "logout.png", "claseTitulo": "pulse cajaClose tituloAlto", "claseMenuItem": "", "hijos": []};
         var _menu = [];
         _menu.push(MenuAdministracion, MenuPerfil, MenuClose);
         return _menu;
@@ -48,15 +48,15 @@
     function GenerateMenusIntemedios() {
         var _menu = [];
 
-        var MenuTransaccion = { "titulo": "Transacciones", "id": "", "claseIcono": "icon_transaccion", "claseTitulo": "", "claseMenuItem": "itemAlto", "hijos": []};
+        var MenuTransaccion = { "titulo": "Transacciones", "id": "", "claseIcono": "transaccion.png", "claseTitulo": "", "claseMenuItem": "itemAlto", "hijos": []};
         var HijoTransaccion1 = { "titulo": "Nueva transacción", "href": urlAplicacion + "pages/NTransaccion.aspx", "clase": ""};
         var HijoTransaccion2 = { "titulo": "Consulta de transacciones", "href": urlAplicacion + "pages/Transaccion.aspx", "clase": ""};
         MenuTransaccion.hijos.push(HijoTransaccion1, HijoTransaccion2);
-        var MenuCSV = { "titulo": "Carga de Datos", "id": "", "claseIcono": "icon_carga", "claseTitulo": "", "claseMenuItem": "itemAlto", "hijos": []};
+        var MenuCSV = { "titulo": "Carga de Datos", "id": "", "claseIcono": "cargaDatos.png", "claseTitulo": "", "claseMenuItem": "itemAlto", "hijos": []};
         var HijoCSV1 = { "titulo": "Nueva carga", "href": urlAplicacion + "pages/Data/Send.aspx", "clase": ""};
         var HijoCSV2 = { "titulo": "Consulta de cargas", "href": urlAplicacion + "pages/Data/list.aspx", "clase": ""};
         MenuCSV.hijos.push(HijoCSV1, HijoCSV2);
-        var MenuAux = { "titulo": "Tablas Auxiliares", "id": "", "claseIcono": "icon_tablasAux", "claseTitulo": "", "claseMenuItem": "itemAlto", "hijos": []};
+        var MenuAux = { "titulo": "Tablas Auxiliares", "id": "", "claseIcono": "tablasAux.png", "claseTitulo": "", "claseMenuItem": "itemAlto", "hijos": []};
         var HijoAux1 = { "titulo": "Tipos de unidades", "href": urlAplicacion + "pages/Unidad.aspx", "clase": ""};
         var HijoAux2 = { "titulo": "Representantes de entidades ROPO", "href": urlAplicacion + "pages/RepreROPO.aspx", "clase": ""};
         var HijoAux3 = { "titulo": "Entidades de baja con usuarios activos", "href": urlAplicacion + "pages/Huerfanos.aspx", "clase": ""};
@@ -81,7 +81,12 @@
             divMenuItem.className = 'item ' + Menus[i].claseMenuItem || '';
             if (Menus[i].id && Menus[i].id.length>0) divMenuItem.id = Menus[i].id || '';
             var icono = document.createElement('img');
-            icono.className = 'linkIcon ' + Menus[i].claseIcono || '';
+            icono.className = 'linkIcon';        
+            if ((Menus[i].claseIcono || '')!=='') {                
+                var origen = window.location.origin + '/' + window.location.pathname.split("/")[1] + '/img/';
+                if (window.location.origin || '' === '') origen = 'file:///D:/github/html5/img/';
+                icono.src = origen + Menus[i].claseIcono;                
+            }    
             var divItemcontent = document.createElement('div');
             divItemcontent.className='item_content';
             var h2Titulo = document.createElement('h2');
@@ -100,9 +105,9 @@
                     divItemcontent.appendChild(pItem);
                 }
             }
-            divMenuItem.appendChild(icono);
+            divMenuItem.appendChild(icono);            
             divMenuItem.appendChild(divItemcontent);
-            document.getElementById('menu').appendChild(divMenuItem);
+            document.getElementById('menu').appendChild(divMenuItem);            
         }
     }
 
