@@ -84,7 +84,7 @@
             icono.className = 'linkIcon';        
             if ((Menus[i].claseIcono || '')!=='') {                
                 var origen = window.location.origin + '/' + window.location.pathname.split("/")[1] + '/img/';
-                if (window.location.origin || '' === '') origen = 'file:///D:/github/html5/img/';
+                if (window.location.origin === '') origen = 'file:///D:/github/html5/img/';
                 icono.src = origen + Menus[i].claseIcono;                
             }    
             var divItemcontent = document.createElement('div');
