@@ -1,0 +1,185 @@
+.HeaderContainer {
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: stretch;
+}
+
+.iconoMenu {
+    display:none;    
+}
+.VacioRight {display: block;}
+header nav {
+    z-index: 1000;
+    display: inline-flex;
+    flex-wrap: wrap;
+}
+
+header nav div {
+    margin-left: 5px;
+    background-color: rgba(155,154,149,.7);
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    white-space:nowrap;
+    cursor: pointer;
+}
+
+header nav div ul li{
+    background-color: rgba(155,154,149,.7);
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    white-space:nowrap;
+    margin: 0px 0px 5px 0px;
+    cursor: pointer;
+}
+
+header div div a:hover {
+    color: #0b965b;
+}
+
+header nav div a {
+    color: white;    
+    text-decoration: none;
+    padding: 5px;
+}
+
+header nav div a span {
+    margin-right: 10px;
+}
+
+header nav div .children {
+    display: none;
+    padding: 10px 0px 0px 0px;
+}
+
+header nav div:hover .children {
+    display: block;
+    position: absolute;    
+    z-index: 1000;        
+}
+
+header nav div .children li {
+    display: block;
+    overflow: hidden; 
+}
+
+.menu {
+    font-family: "Trebuchet MS", sans-serif;
+    font-style: normal;
+    font-weight: bold;
+}
+
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+  content: '';
+  display: block;
+  background: #60C442;
+  height: 3px;
+  width: 24px;
+  border-radius: 3px;
+  transition: all ease-in-out 500ms;
+}
+
+.hamburger::before {
+  transform: translateY(-6px);
+}
+
+.hamburger::after {
+  transform: translateY(3px);
+}
+
+.open .hamburger {
+  transform: rotate(45deg);
+}
+
+.open .hamburger::before {
+  opacity: 0;
+}
+
+.open .hamburger::after {
+  transform: translateY(-3px) rotate(-90deg);
+}
+
+.pulseClose:hover  {
+    -webkit-animation-name: pulse;
+    animation-name: pulse;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;  
+}
+
+@media screen and (max-width: 1355px) {
+    .HeaderContainer {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 840px) {
+    .VacioRight {display: none;}
+    .HeaderContainer {
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-content: stretch;
+    }
+    
+    .HeaderContainer .Titulo {
+        width: 100%;
+    }
+    header nav {
+        flex-direction: column;
+    }
+    header nav div {
+        margin: 5px;
+        text-align: inherit;
+        min-width: 300px;
+        max-width: 350px;
+    }
+    .iconoMenu {
+        z-index: 999;
+        display:inline-flex;
+        cursor: pointer;
+        margin-left: 5px;
+        height: 1em;
+        width: 1em;
+        padding-top: 10px;
+    }
+    .menuHidden {        
+            margin-top: -100em;                    				
+    }
+    .menuVisible {
+            display: flex;
+            margin-top: 0px;       
+            width: 95%;           				
+    }    
+    .menuTransition {transition: all ease-in-out 1000ms;}
+    header nav div:hover .children {
+        display: flex;
+        flex-direction: column;
+        position: inherit;
+        margin-left: 20px;
+        background-color: transparent;
+        width: auto;
+    }
+    header nav div .children {        
+        padding: 0px;
+    }
+    header nav div .children li {
+        text-align: left;
+    }
+    header nav div ul li {
+        background-color: transparent;
+    }
+}

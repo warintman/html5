@@ -12,7 +12,7 @@
             for (var i = 0; i < sheets.length; i += 1) {
                 var rules;
                 try {
-                    rules =  sheets[i].rules || sheets[i].cssRules;              
+                    rules =  sheets[i].cssRules || sheets[i].rules;              
                 } catch(e) {
                     if(e.name !== "SecurityError") {
                         throw e;
