@@ -82,10 +82,14 @@
             var divMenuItem = document.createElement('div');            
             if (Menus[i].id && Menus[i].id.length>0) divMenuItem.id = Menus[i].id || '';
             if (Menus[i].claseTitulo && Menus[i].claseTitulo.length>0) divMenuItem.className = Menus[i].claseTitulo || '';
-            var aref = document.createElement('a');            
+            var aref = document.createElement('a');    
+            aref.className = 'TituloMenu';        
             aref.innerText = Menus[i].titulo || '';
             divMenuItem.appendChild(aref);
             if (Menus[i].hijos && Menus[i].hijos.length>0) {
+                var divv = document.createElement('div');
+                divv.className = 'iconDown';
+                divMenuItem.appendChild(divv);
                 var ul = document.createElement('ul');
                 ul.className = 'children fadeInDown';
                 var j;

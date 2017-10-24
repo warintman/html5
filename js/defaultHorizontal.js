@@ -68,7 +68,7 @@
         document.getElementById('iconoMenu').classList.toggle('open');
         if (!document.getElementById('menu').classList.contains('menuTransition')) document.getElementById('menu').classList.add('menuTransition');
         if (document.getElementById('iconoMenu').classList.contains('open')) {
-            if (IEVersion !== -1 && IEVersion < 12) document.getElementById('HeaderContainer').style.minHeight = '36em';            
+            if (IEVersion !== -1 && IEVersion < 12) document.getElementById('HeaderContainer').style.minHeight = '43em';            
             document.getElementById('menu').classList.remove('menuHidden');
             document.getElementById('menu').classList.add('menuVisible');            				
         }
@@ -87,24 +87,23 @@
         // TODO: Figure out what the hell that's all about
         //console.log();                
         //if (mql.matches && (mql.media==='screen and (max-width: 840px)' || mql.media==='screen and (max-width:840px)')) {
-        if (mql.media==='screen and (max-width: 840px)' || mql.media==='screen and (max-width:840px)') {
-            //si estaba abierto el menu, lo cierro            
-            if (!mql.matches) {
-                closeMenu(); 
-                if (IEVersion !== -1 && IEVersion < 12) document.getElementById('HeaderContainer').style.minHeight = '9em';
-            }
-            else {
-                if (IEVersion !== -1 && IEVersion < 12) document.getElementById('HeaderContainer').style.minHeight = '6em';
-            }
-        }
-        if ((IEVersion !== -1 && IEVersion < 12) && (mql.media==='screen and (max-width: 1355px)' || mql.media==='screen and (max-width:1355px)')) {
-            if (!mql.matches) document.getElementById('HeaderContainer').style.minHeight = '6em';
-            else document.getElementById('HeaderContainer').style.minHeight = '9em';
-        }  
+        if (!mql.matches && mql.media==='screen and (max-width: 860px)' || mql.media==='screen and (max-width:860px)') closeMenu();
+        ComprobarAltoHeaderIE();
     };
 
     //https://bugs.chromium.org/p/chromium/issues/detail?id=49001
     //poner el chrome con --allow-file-access-from-files para probarlo en local
     mqEvents(handleMediaChange);
-    if (IEVersion !== -1 && IEVersion < 12) document.getElementById('HeaderContainer').style.minHeight = '6em';
+    ComprobarAltoHeaderIE();
+
+    function ComprobarAltoHeaderIE() {
+        if (IEVersion !== -1 && IEVersion < 12) {
+            if (window.innerWidth>1355) document.getElementById('HeaderContainer').style.minHeight = '5.5em';
+            else {
+                if (window.innerWidth>860) document.getElementById('HeaderContainer').style.minHeight = '9em';
+                else document.getElementById('HeaderContainer').style.minHeight = '6em';
+            }
+        }
+    }
+
 })();

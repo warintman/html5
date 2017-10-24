@@ -1,5 +1,6 @@
 .HeaderContainer {
     margin: auto;
+    margin-right: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -7,7 +8,11 @@
     flex-wrap: nowrap;
     align-content: stretch;
 }
-
+.iconDown {    
+    background: transparent url(../img/FlechaAbajo.png) center no-repeat;
+    width: 12px;
+    height: 12px;
+}
 .iconoMenu {
     display:none;    
 }
@@ -16,6 +21,21 @@ header nav {
     z-index: 1000;
     display: inline-flex;
     flex-wrap: wrap;
+}
+@media (min-width:1356px) and (-ms-high-contrast:none)
+{
+*::-ms-backdrop, header nav { margin-top: 12px !important; } /* IE11 */
+}
+@media (min-width:861px) and (-ms-high-contrast:none)
+{
+*::-ms-backdrop, header nav div .children { 
+    margin-left: -10px !important;
+    padding: 10px 0px 0px 0px !important;
+} /* IE11 */
+*::-ms-backdrop, header nav div {display: inline-block !important;} /* IE11 */
+*::-ms-backdrop, .iconDown {
+    padding: 5px 0px;
+} /* IE11 */
 }
 
 header nav div {
@@ -26,6 +46,7 @@ header nav div {
     text-align: center;
     white-space:nowrap;
     cursor: pointer;
+    display: flex;
 }
 
 header nav div ul li{
@@ -38,14 +59,22 @@ header nav div ul li{
     cursor: pointer;
 }
 
-header div div a:hover {
+header div nav div:hover a.TituloMenu {
+    color: black;
+}
+header div nav div ul li:hover a {
     color: #0b965b;
+}
+header div div:hover .iconDown {    
+    background: transparent url(../img/FlechaAbajoNegro.png) center no-repeat;
+    width: 12px;
+    height: 12px;
 }
 
 header nav div a {
     color: white;    
     text-decoration: none;
-    padding: 5px;
+    padding: 5px 0px;
 }
 
 header nav div a span {
@@ -54,7 +83,7 @@ header nav div a span {
 
 header nav div .children {
     display: none;
-    padding: 10px 0px 0px 0px;
+    padding: 30px 0px 0px 0px;
 }
 
 header nav div:hover .children {
@@ -123,7 +152,8 @@ header nav div .children li {
     }
 }
 
-@media screen and (max-width: 840px) {
+@media screen and (max-width: 860px) {
+    .iconDown {display: none;}
     .VacioRight {display: none;}
     .HeaderContainer {
         margin: auto;
@@ -169,7 +199,7 @@ header nav div .children li {
         display: flex;
         flex-direction: column;
         position: inherit;
-        margin-left: 20px;
+        margin-left: -30px;
         background-color: transparent;
         width: auto;
     }
@@ -181,5 +211,8 @@ header nav div .children li {
     }
     header nav div ul li {
         background-color: transparent;
+    }
+    header nav div ul li:first-child {
+        margin-top: 15px;
     }
 }
