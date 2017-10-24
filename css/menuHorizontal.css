@@ -49,6 +49,10 @@ header nav div {
     display: flex;
 }
 
+header nav div ul {
+    padding-left: 0px;
+}
+
 header nav div ul li{
     background-color: rgba(155,154,149,.7);
     padding: 10px;
