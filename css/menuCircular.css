@@ -294,3 +294,24 @@
     margin-top: 5px;
     margin-right: 5px;
   }
+
+  .pulseClose:hover  {
+    -webkit-animation-name: pulse;
+    animation-name: pulse;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;  
+}
+
+.ToolBarVisible {
+  flex-direction: column;
+  align-items: flex-end;  
+  margin-right: 0px;
+}
+
+.Perfil {
+  margin-right: 15px !important;
+}
