@@ -29,7 +29,7 @@
     content: ' ';
     position: relative;
     width: 20px;
-    border: 2px solid #60C442;
+    border: 2px solid #41872c;
     border-radius: 5px;
     transition: all 0.333333333333333s ease;
   }
@@ -39,7 +39,7 @@
     position: absolute;
     left: 50%;
     width: 100%;
-    border: 2px solid #60C442;
+    border: 2px solid #41872c;
     border-radius: 5px;
     transform: translateX(-50%);
     transition-property: top, bottom, transform;
