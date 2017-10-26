@@ -7,7 +7,8 @@
 <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<!-- 
+<link rel="stylesheet prefetch" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<!--
 <link rel="stylesheet" href="css/estilosDisplayGrid.css" />
 -->
 <!-- -->
@@ -17,21 +18,33 @@
 <link rel="stylesheet" href="css/estilosDisplayFlex.css" />
 <link rel="stylesheet" href="css/maincontainerDefault.css" />
 <!--<link rel="stylesheet" href="css/menu.css" />-->
-<link rel="stylesheet" href="css/menuHorizontal.css" />
+<!--<link rel="stylesheet" href="css/menuHorizontal.css" />-->
+<link rel="stylesheet" href="css/menuCircular.css" />
 </head>
  
-<body>    
+<body>        
     <header>
-        <div class="HeaderContainer" id="HeaderContainer">                                
-            <div class="VacioRight"></div>
-            <div class="Titulo">
-                <div class="iconoMenu" id="iconoMenu">                    
-                    <div class="hamburger" id="menuHamburger"></div>
-                </div>                
-                <div id="titulo"></div><div id="subtitulo" class="subTitulo zoomIn"></div>                
-            </div>            
-            <nav class="menu menuHidden zoomIn" id="menu">                                                                   						            
-            </nav>
+        <div class="HeaderContainer" id="HeaderContainer">
+
+          <div class="menuHolder">
+            <div class="menuWindow">
+              <ul class="p1">
+                <li class="s1">
+                  <div class="iconContainer">
+                    <div class="icon">
+                      <div class="hamburger"></div>
+                    </div>
+                  </div>
+                  <ul class="p2" id="menu">                    
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+            
+          <div class="Titulo">                    
+              <div id="titulo"></div><div id="subtitulo" class="subTitulo zoomIn"></div>                
+          </div>                        
         </div>                 
     </header>
     <nav id="ToolBar">
@@ -72,12 +85,15 @@
         <span class="P" id="footerTexto"></span>
     </footer>
     <!--<script language="JavaScript" src="js/menus.js"></script>-->
-    <script language="JavaScript" src="js/menusHorizontal.js"></script>
+    <!--<script language="JavaScript" src="js/menusHorizontal.js"></script>-->
+    <script language="JavaScript" src="js/menusCircular.js"></script>
     <script language="JavaScript" src="js/tareas.js"></script>
     <script language="JavaScript" src="js/mq-events.js"></script>
     <script language="JavaScript" src="js/oncssanimationend.js"></script>
     <!--<script language="JavaScript" src="js/default.js"></script>    -->
-    <script language="JavaScript" src="js/defaultHorizontal.js"></script>
+    <!--<script language="JavaScript" src="js/defaultHorizontal.js"></script>-->
+    <script language="JavaScript" src="js/circletype.min.js"></script>
+    <script language="JavaScript" src="js/defaultCircular.js"></script>
 </body>
 
 </html>
